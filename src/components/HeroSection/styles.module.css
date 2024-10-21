@@ -1,0 +1,83 @@
+
+.universalViewingWrapper {
+    width: 100%;
+  }
+  
+  .heroBanner {
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/img/hero-background.webp');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  .heroContent {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .heroTitle {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  .infoSection {
+    padding: 4rem 0;
+  }
+  
+  .infoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .infoContent {
+    flex: 1;
+  }
+  
+  .infoTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--ifm-color-primary-darkest);
+  }
+  
+  .infoText {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--ifm-color-emphasis-700);
+  }
+  
+  .infoImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .placeholderImage {
+    width: 300px;
+    height: 300px;
+    background-color: var(--ifm-color-primary-lighter);
+    border-radius: 8px;
+  }
+  
+  @media screen and (max-width: 966px) {
+    .infoContainer {
+      flex-direction: column;
+    }
+  
+    .heroBanner {
+      padding: 2rem;
+    }
+  }

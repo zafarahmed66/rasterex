@@ -43,6 +43,32 @@ This file is included with the installation and can be located under assets/html
 ```html
 <html>
 <head>
+    <style>
+        
+    #rxcontainer {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        overflow: hidden;
+    }
+    
+    #rxcanvas { border: 1px solid #000; }
+    #imageDisp { position: absolute; top: 1px; left: 1px; }
+    #imageTemp { position: absolute; top: 1px; left: 1px; }
+    #canv3D {
+        position: absolute; top: 1px; left: 1px;
+        background: -webkit-linear-gradient(#FFFFFF, #b5b5b5); /* Safari 5.1-6.0 */
+        background: -o-linear-gradient(#FFFFFF, #b5b5b5);      /* Opera 11.1-12.0 */
+        background: -moz-linear-gradient(#FFFFFF, #b5b5b5);    /* Firefox 3.6-15 */
+        background: linear-gradient(#FFFFFF, #b5b5b5);         /* Standard syntax */
+    }
+
+
+    </style>
 </head>
 
 <body>
@@ -50,20 +76,22 @@ This file is included with the installation and can be located under assets/html
     <div id="rxcontainer">
     </div>
 
-    <script src="foxiframeconnect.js"></script>
-    <script src="rxconfig.js"></script>
-    <script src="rxcorefunctions.min.js"></script>
-    <script type="text/javascript" src="three/three.min.js"></script>
-    <script type="text/javascript" src="three/detector.js"></script>
-    <script type="text/javascript" src="three/GLTFLoader.js"></script>
-    <script type="text/javascript" src="jquery/jquery-2.1.0.min.js"></script>
+    <script src="../assets/scripts/foxiframeconnect.js"></script>
+    <script src="../assets/scripts/rxconfig.js"></script>
+    <script src="../assets/scripts/rxcorefunctions.min.js"></script>
+    <script type="text/javascript" src="../assets/scripts/three.min.js"></script>
+    <script type="text/javascript" src="../assets/scripts/detector.js"></script>
+    <script type="text/javascript" src="../assets/scripts/GLTFLoader.js"></script>
+    <script type="text/javascript" src="../assets/scripts/jquery-2.1.0.min.js"></script>
 
     <script type="text/javascript" charset="utf-8">
 
+        var bguireadycalled = false;
+        var bfoxitreadycalled = false;
+        var binitfileopened = false;
+
+
         $(document).ready(function () {
-            var bguireadycalled = false;
-            var bfoxitreadycalled = false;
-            var binitfileopened = false;
 
             //file to open on startup
             var drawing = "C:\\\\Rasterex\\\\Upload\\\\040915 MOBSLAKT.pdf";
@@ -103,7 +131,7 @@ This file is included with the installation and can be located under assets/html
             if (bguireadycalled && bfoxitreadycalled) {
                 if (binitfileopened == false) {
                     binitfileopened = true;
-                    RXCore.openFile(initialDoc);
+                    RxCore.openFile(initialDoc);
                 }
             }
         }
@@ -120,29 +148,29 @@ This file is included with the installation and can be located under assets/html
 The following CSS declaration must be referenced in the main HTML document:
 
 ```css
-#rxcontainer {
-   position: relative;
-   width: 100%;
-   height: 100%;
-   display: block;
-   margin: 0;
-   padding: 0;
-   border: 0;
-   float: left;
-}
+    #rxcontainer {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        overflow: hidden;
+    }
 ```
 
 Additional CSS styles for canvas elements:
 
 ```css
-#rxcanvas { border: 1px solid #000; }
-#imageDiag { position: absolute; top: 1px; left: 1px; }
-#imageTemp { position: absolute; top: 1px; left: 1px; }
-#canvas {
-   position: absolute; top: 1px; left: 1px;
-   background: -webkit-linear-gradient(#FFFFFF, #b5b5b5); /* Safari 5.1-6.0 */
-   background: -o-linear-gradient(#FFFFFF, #b5b5b5);      /* Opera 11.1-12.0 */
-   background: -moz-linear-gradient(#FFFFFF, #b5b5b5);    /* Firefox 3.6-15 */
-   background: linear-gradient(#FFFFFF, #b5b5b5);         /* Standard syntax */
-}
+    #rxcanvas { border: 1px solid #000; }
+    #imageDisp { position: absolute; top: 1px; left: 1px; }
+    #imageTemp { position: absolute; top: 1px; left: 1px; }
+    #canv3D {
+        position: absolute; top: 1px; left: 1px;
+        background: -webkit-linear-gradient(#FFFFFF, #b5b5b5); /* Safari 5.1-6.0 */
+        background: -o-linear-gradient(#FFFFFF, #b5b5b5);      /* Opera 11.1-12.0 */
+        background: -moz-linear-gradient(#FFFFFF, #b5b5b5);    /* Firefox 3.6-15 */
+        background: linear-gradient(#FFFFFF, #b5b5b5);         /* Standard syntax */
+    }
 ```

@@ -1,7 +1,8 @@
 ---
 title: Introduction
 ---
-# Rasterex Web SDK
+
+# Rasterex Web SDK 
 
 Rasterex Web SDK is a JavaScript based library that is created to enable viewing and annotating using a large variety of file formats. This is accomplished using a server back-end that provides processed data based on the original file format.  The file content is rendered using HTML 5 canvas and is compatible with most modern browsers.  
 
@@ -20,10 +21,9 @@ Many methods are provided to perform operations on the drawing/document. These o
 
 ---
 
-### Rasterex Web SDK viewer
-The viewer is built using the Angular framework and is intended as a complete viewer that can demonstrate most of the Rasterex Web SDK current capabilities. The source for the viewer is freely available on our Github page. End users can modify and customize this viewer to suit their needs.
+### Two versions
 
-![RxView](./img/rxview.png)
+
 
 There are two versions of the Rasterex Web SDK
 
@@ -31,7 +31,17 @@ There are two versions of the Rasterex Web SDK
 
 **Basic version** – Uses PDFJS as the technology to display and handle PDF.
 
+
 ---
+
+### Supported file formats
+
+Click here to see a list of supported file formats.
+
+[Supported file formats](https://www.rasterex.com/file-formats?hsCtaTracking=f7142bf7-4cfa-4c3b-8be8-cde24df7f2b4%7Cdae7ecbb-26b0-43cd-b9d0-3579248ec31b)
+
+
+
 
 ### Github links
 

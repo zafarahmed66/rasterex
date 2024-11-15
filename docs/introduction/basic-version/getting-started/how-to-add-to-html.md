@@ -13,23 +13,55 @@ The following script files need to be referenced for the viewer to work.
 ```html
 <html>
 
-<head> </head>
+<head>
+
+<style>
+        
+    #rxcontainer {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        overflow: hidden;
+    }
+    
+    #rxcanvas { border: 1px solid #000; }
+    #imageDisp { position: absolute; top: 1px; left: 1px; }
+    #imageTemp { position: absolute; top: 1px; left: 1px; }
+    #canv3D {
+        position: absolute; top: 1px; left: 1px;
+        background: -webkit-linear-gradient(#FFFFFF, #b5b5b5); /* Safari 5.1-6.0 */
+        background: -o-linear-gradient(#FFFFFF, #b5b5b5);      /* Opera 11.1-12.0 */
+        background: -moz-linear-gradient(#FFFFFF, #b5b5b5);    /* Firefox 3.6-15 */
+        background: linear-gradient(#FFFFFF, #b5b5b5);         /* Standard syntax */
+    }
+
+
+    </style>
+  
+</head>
 
 <body>
     <div id="rxcontainer"></div>
 
-    <script src="rxconfig.js"></script>
-    <script src="rxcorefunctions.min.js"></script>
-    <script type="text/javascript" src="three/three.min.js"></script>
-    <script type="text/javascript" src="three/detector.js"></script>
-    <script type="text/javascript" src="three/GLTFLoader.js"></script>
-    <script src="pdfjs/build/pdf.js"></script>
+    <script src="../assets/scripts/rxconfig.js"></script>
+    <script src="../assets/scripts/rxcorefunctions.min.js"></script>
+    <script type="text/javascript" src="../assets/scripts/three.min.js"></script>
+    <script type="text/javascript" src="../assets/scripts/detector.js"></script>
+    <script type="text/javascript" src="../assets/scripts/GLTFLoader.js"></script>
+    <script src="../assets/vendors/pdfjs/build/pdf.js"></script>
 
+    
     <script type="text/javascript" charset="utf-8">
 
-        $(document).ready(function () {
             var bguireadycalled = false;
             var binitfileopened = false;
+
+
+        $(document).ready(function () {
 
             //file to open on startup
             var drawing = "C:\\\\Rasterex\\\\Upload\\\\040915 MOBSLAKT.pdf";
@@ -84,7 +116,7 @@ The following CSS declaration must be referenced in the main HTML document:
   margin: 0;
   padding: 0;
   border: 0;
-  float: left;
+  overflow: hidden;
 }
 ```
 
@@ -94,7 +126,7 @@ Additional CSS styles for canvas elements:
 #rxcanvas {
   border: 1px solid #000;
 }
-#imageDiag {
+#imageDisp {
   position: absolute;
   top: 1px;
   left: 1px;
@@ -104,7 +136,7 @@ Additional CSS styles for canvas elements:
   top: 1px;
   left: 1px;
 }
-#canvas {
+#canv3D {
   position: absolute;
   top: 1px;
   left: 1px;

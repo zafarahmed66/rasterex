@@ -322,13 +322,133 @@ Load With Extents – If set to Yes the AutoCAD file will be displayed zoomed to
 
 ---
 
+## Manually editing the rxcsisapi.ini file
+
+The configuration setting above using the web interface may not include all possible settings currently available. Additional settings can be manually added in the rxcsisapi.ini file which is where the configuration data is written when using the server web interface. 
+
+**Make sure to stop and start the RxViewServerWeb application pool for any changes to take effect.**
+
+There are several sections.
+
+```
+[SYSTEM]
+;Lock Config. If set to non-zero the "Config" command will be disabled.
+Locked=0
+ 
+;Lock License Information. If set to non-zero the "ShowLicenseInfo" command will be disabled.
+LicenseInfoLocked=0
+ 
+;Enable use for a single license file
+SingleLicense=1
+ 
+;Set Process Priority for RxCacheProc.exe (see https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-setpriorityclass)
+ProcessPriority=1
+ 
+;If set to non-zero, all file requests will be written to rxcsisapi_error.log
+LogAllFileRequests=1
+ 
+;Optional server storage folder that will be used if relative path filenames are sent to the server.
+ServerStorage=D:\rxview360\storage
+ 
+[UPLOAD]
+;Default upload folder
+folder=C:\Rasterex\Upload
+ 
+[CACHE]
+;Default cache folder (cannot be changed in current version after install)
+folder=C:\Rasterex\RxView360Server\bin\cache
+ 
+;Cache folder to use for GZIP'ed files created during publish.
+gzip=C:\Rasterex\RxView360Server\bin\gzip
+ 
+;If non-zero, all data downloaded from an URL will overwrite current cache content.
+alwaysoverwriteurl=1
+ 
+[AutoCAD]
+;If non-zero, frozen DWG layers will not be loaded.
+IgnoreFrozenLayers=0
+ 
+;If non-zero, SHX and TrueType fonts will be loaded from the DWG file.
+UseFonts=1
+ 
+;Folder for SHX font files
+Fonts=C:\Rasterex\Upload
+ 
+;If non-zero, DWG blocks and attributes will be loaded
+LoadBlocks=1
+ 
+;XREF folder
+Xrefs=
+ 
+;DWG Render mode
+;0 = legacy (ActiveX)
+;1 = 360 optimized
+;2 = 360 optimized, ignore dots.
+RenderMode=1
+ 
+;DWG Render quality
+;0 = 0.5
+;1 = 0.1
+;2 = 0.01 
+;3 = 0.001
+;Lower value gives higher precision (smoother) but is slower and requires more memory.
+RenderDeviation=0
+ 
+;If non-zero XDATA will be loaded
+LoadXDATA=0
+ 
+;If non-zero the currently set color will be used for display of monochrome raster images.
+AllowRasterColor=1
+ 
+[LICENSING]
+;Path to FlexLM license file is single license mode is used.
+FlexLMLicenseFile=d:\dev2014\12287.lic
+ 
+;If set to non-zero all exported PDF files will have "evaluation" watermark
+TrialMode=0
+ 
+[STREAMING]
+;Set optional timeout for RxCacheProc in milliseconds.
+TimeOut=0
+;Set optional max memory usage for RxCacheProc
+MaxMemory=0
+ 
+;If set to non-zero all images in CAD files will be stored inside the Rx2B file.
+EmbedAllImages=1
+ 
+;Maximum size in pixels to allow for images found in CAD files.
+MaxEmbeddedSize=6000
+ 
+;Maximum size to use for raster images.
+LargeImageSize=4000
+ 
+;Set number of concurrent RxCacheProc instances.
+MaxProcesses=1
+ 
+[PDF]
+;Set to non-zero to disable use of PDF user unit on the server side (required by current Foxit and PDF.js implementations.)
+IgnoreUserUnit=1
+ 
+[COMPARE]
+;Set DPI to use for server side comparison (ComparePDF)
+DPI=300
+ 
+;Set Bits per Pixel to use for server side comparison (ComparePDF)
+BPP=24
+ 
+;Set maximum PDF paper size to use for server side comparison (ComparePDF)
+PAPERFORMAT=A4
+```
+
+---
+
 ## Manual configuration
 RxView360 installation should normally set up all security settings for you. Should you however, for some reason, need to set this up manually please follow the instructions below.
 
 ---
 
 ### Windows folder security
-You will need to make sure that the following security settings are set for the folders created by the installation.Use explorer to locate each of the folders below. Right click on the folder and select “Properties”. Select the Security Tab and add the Local System and IUSR built in users to the list of users. Click the Add button if these are not listed in the user list. Remember to use the local built in user not domain users.
+You will need to make sure that the following security settings are set for the folders created by the installation.Use explorer to locate each of the folders below. Right click on the folder and select “Properties”.Select the Security Tab and add the Local System and IUSR built in users to the list of users.Click the Add button if these are not listed in the user list. Remember to use the local built in user not domain users.
 
 ![ISS Handler](./img/folder-security.png)
 

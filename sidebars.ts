@@ -62,7 +62,9 @@ const sidebars: SidebarsConfig = {
                   items: [
                     "introduction/user-guide/generalLayoutNavigation",
                     "introduction/user-guide/topNavigationMenu",
-                    "introduction/user-guide/sideNavigationMenu",
+                    // "introduction/user-guide/sideNavigationMenu",
+                    "introduction/user-guide/toolbar",
+                    "introduction/user-guide/annotate-toolbar",
                   ],
                 },
               ],

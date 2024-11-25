@@ -28,6 +28,7 @@ import view from "./img/top-navigation/view.png";
 import annotate from "./img/top-navigation/annotate.png";
 import revision from "./img/top-navigation/revision.png";
 import signature from "./img/top-navigation/signature.png";
+import measure from "./img/top-navigation/measure.png";
 import moreMenu from "./img/top-navigation/more-menu.png";
 
 
@@ -51,7 +52,7 @@ The logo is positioned in the top left-hand corner of the page within the top na
 - **Current Functionality**: Clicking on the logo does not currently initiate any navigation action.
 - **Future Implementation**: The design includes provisions to direct users either to the root system or a designated website upon clicking the logo, enhancing user experience and enabling seamless navigation.
 
----
+{/* ---
 
 ### Home Icon
 
@@ -60,7 +61,7 @@ The logo is positioned in the top left-hand corner of the page within the top na
 The home icon, located within the top navigation bar, facilitates user navigation.
 
 - **Design Intent**: It is intended to direct users to the homepage of the viewer, such as the recent files list, or to the homepage of an SDK demo.
-- **Current Functionality**: Clicking the home icon does not currently trigger any navigation action.
+- **Current Functionality**: Clicking the home icon does not currently trigger any navigation action. */}
 
 ---
 
@@ -236,7 +237,15 @@ The **view mode switcher** allows users to select the mode in which they want to
    - This mode allows users to add annotations, notes, highlights, and other mark-up elements.
    - Provides tools for creating and editing annotations to customize feedback or notes on the file content.
 
-3. **Revision**
+2. **Measure**
+
+   <img src={measure} alt="annotate" />
+
+   - Users can measure the file and create mark-ups using the annotation toolbar (described separately).
+   - This mode allows users to measure.
+
+
+{/* 3. **Revision**
 
    <img src={revision} alt="revision" />
 
@@ -265,4 +274,4 @@ The **"More" menu** provides access to auxiliary options like:
 - **New**
 
 **Note:**  
-These options are not currently implemented. Selecting any of these options will not result in any action being taken within the application.
+These options are not currently implemented. Selecting any of these options will not result in any action being taken within the application. */}

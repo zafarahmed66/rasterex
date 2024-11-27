@@ -1,0 +1,145 @@
+---
+title: Note Annotations and Menu
+---
+
+import apply from "./img/note-annotations-and-menu/apply.png";
+import author from "./img/note-annotations-and-menu/author.png";
+import cancel from "./img/note-annotations-and-menu/cancel.png";
+import createdby from "./img/note-annotations-and-menu/created-by.png";
+import createdlist from "./img/note-annotations-and-menu/created-list.png";
+import cross from "./img/note-annotations-and-menu/cross.png";
+import dateofcreation from "./img/note-annotations-and-menu/date-of-creation.png";
+import dialog from "./img/note-annotations-and-menu/dialog.png";
+import dialog2 from "./img/note-annotations-and-menu/dialog2.png";
+import filter from "./img/note-annotations-and-menu/filter.png";
+import info from "./img/note-annotations-and-menu/info.png";
+import inputtext from "./img/note-annotations-and-menu/input-text.png";
+import inputtext2 from "./img/note-annotations-and-menu/input-text2.png";
+import noteannotationsmenuupdated from "./img/note-annotations-and-menu/note-annotations-menu-updated.png";
+import noteannotationsmenu from "./img/note-annotations-and-menu/note-annotations-menu.png";
+import notes from "./img/note-annotations-and-menu/notes.png";
+import post from "./img/note-annotations-and-menu/post.png";
+import post2 from "./img/note-annotations-and-menu/post2.png";
+import searchfield from "./img/note-annotations-and-menu/search-field.png";
+import searchfield2 from "./img/note-annotations-and-menu/search-field2.png";
+import sort from "./img/note-annotations-and-menu/sort.png";
+import sort2 from "./img/note-annotations-and-menu/sort2.png";
+import timestamp from "./img/note-annotations-and-menu/timestamp.png";
+import update from "./img/note-annotations-and-menu/update.png";
+import update2 from "./img/note-annotations-and-menu/update2.png";
+import username from "./img/note-annotations-and-menu/username.png";
+
+The note annotation tool, which is available within the annotations toolbar, has functionality that is somewhat different from the other annotation types. It allows for the possibility of viewing, sorting, and filtering existing sticky-note markups.
+
+<img style={{height: "500px"}} src={noteannotationsmenu} alt="noteannotationsmenu" />
+
+---
+
+### Selecting the Note Tool
+When a user selects the note tool in the annotation toolbar, it will invoke the display of the notes modal window, which lists the existing sticky-notes in the current viewed document.
+
+---
+
+### Creating a Sticky Note
+- If the document does not have any sticky notes created, the user will be presented with a placeholder note that can be created by clicking on the document.
+    <img src={info} alt="info" />
+- When the note tool is active, a user can click anywhere on the drawing to start creating a sticky note markup. This action creates an empty note and allows the user to fill in the content and modify its properties.
+    <img src={dialog} alt="dialog" />
+
+- The newly created note will suggest the user to enter text in order to save the note.
+    <img src={dialog2} alt="dialog2" />
+    
+- Once the note text is filled in, the “Post” button will become active, and the user can save the annotation’s text.
+
+---
+
+### Sticky Note Item Fields
+The note item contains the following fields and values:
+
+- **User Name**  
+    <img src={username} alt="username" />
+
+  Shows the name of the current user (user layer) creating the sticky note annotation.
+
+- **Timestamp**  
+    <img src={timestamp} alt="timestamp" />
+  Presents the date and time when the sticky note was created.
+
+- **Text Input**  
+    <img src={inputtext} alt="inputtext" />
+    <img src={inputtext2} alt="inputtext2" />
+  Lets the user enter the text description of the sticky note and add content to it.
+
+- **Cancel**  
+    <img src={cancel} alt="cancel" />
+  Dismisses the changes and closes the sticky note creation or editing menu.
+
+- **Post/Update**  
+    <div>
+        <img src={post} alt="post" />
+        <img src={post2} alt="post2" />
+    </div>
+    <div>
+        <img src={update} alt="update" />
+        <img src={update2} alt="update2" />
+    </div>
+  Allows the user to save the textual content of the sticky note’s markup.
+
+---
+
+### Viewing and Interacting with Sticky Notes
+Once sticky note markups are created on the drawing, they will be displayed in the “Notes” menu of the annotation toolbar, allowing the user to browse and search for notes. Clicking on a note in the list will select the respective note on the markup layer.
+<img style={{height: "500px"}} src={noteannotationsmenuupdated} alt="noteannotationsmenuupdated" />
+
+---
+
+### Notes Menu Interaction
+In this menu, the user can view and interact with the existing sticky notes using the following elements:
+
+- **Search Field**  
+    <img src={searchfield} alt="searchfield" /> 
+  Using the search field, the user can search for specific notes by entering a query. Once the input is filled, the notes list will filter to show only the notes containing the matching expression.  
+    <img src={searchfield2} alt="searchfield2" /> 
+  A user can remove the search query to reset the search.
+
+- **Sorting Options**  
+    <img src={sort} alt="sort" /> 
+  The sort dropdown allows the user to set the criteria by which the notes are sorted in the list. The available sorting criteria are:
+    <img src={sort2} alt="sort2" /> 
+
+  - **Created**  
+    This option sorts the notes by the date and time of their creation, with the most recent notes at the top.
+    <img style={{height: "300px"}} src={createdlist} alt="createdlist" /> 
+
+  - **Author**  
+    This option sorts the notes by the names of their authors in descending alphabetical order.
+    <img style={{height: "300px"}} src={author} alt="author" /> 
+
+- **Filters**  
+    <img  src={filter} alt="filter" /> 
+
+  The filters menu provides access to advanced filtering options, allowing the user to adjust the data presented in the list to match the filter criteria. Available filters include:
+  - **Created by**  
+    <img  src={createdby} alt="createdby" /> 
+
+    Allows the user to select the user(s) whose sticky notes should be displayed in the notes list. A user can be selected or unselected by adding or removing a checkmark next to their name.
+
+  - **Date of Notes Creation**  
+    <img  src={dateofcreation} alt="dateofcreation" /> 
+
+    Allows the user to select a specific date or range of dates to display notes from that period. Default periods include today, past 7 days, past 14 days, and past 30 days. Users can also manually set the start and end date by clicking on the calendar.
+
+- **Apply**  
+    <img  src={apply} alt="apply" /> 
+  After defining the filter parameters, the user can click the "Apply" button to activate the selected filter. The “Filter” icon in the notes menu will be highlighted to indicate active filtering.
+
+---
+
+### Exiting the Notes Menu
+    <img  src={notes} alt="notes" /> 
+    <img  src={cancel} alt="cancel" /> 
+When all interactions with the sticky note markups are complete, the user can close the notes menu to exit the note creation mode. This can be done by either:
+- Clicking on the active note icon in the annotation toolbar, or
+- Clicking the close icon located in the top right-hand corner of the notes menu.
+
+After the notes menu is closed, the user will be able to use the zoom and pan options without creating a sticky note markup when clicking on the canvas.

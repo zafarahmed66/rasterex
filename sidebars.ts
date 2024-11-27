@@ -72,6 +72,15 @@ const sidebars: SidebarsConfig = {
                   label: "Annotate Mode",
                   items: [
                     "introduction/user-guide/annotate-mode/annotate-mode",
+                    "introduction/user-guide/annotate-mode/note-annotations-and-menu",
+                    "introduction/user-guide/annotate-mode/annotations-shortcut-menu",
+                    {
+                      type: "category",
+                      label: "Annotate Editing",
+                      items: [
+                        "introduction/user-guide/annotate-mode/annotate-editing",
+                      ],
+                    },
                   ],
                 },
               ],

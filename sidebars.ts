@@ -60,15 +60,23 @@ const sidebars: SidebarsConfig = {
                   type: "category",
                   label: "General Layout Navigation",
                   items: [
-                    "introduction/user-guide/generalLayoutNavigation",
-                    "introduction/user-guide/topNavigationMenu",
-                    // "introduction/user-guide/sideNavigationMenu",
-                    "introduction/user-guide/toolbar",
-                    "introduction/user-guide/annotate-toolbar",
+                    "introduction/user-guide/general-layout/generalLayoutNavigation",
+                    "introduction/user-guide/general-layout/topNavigationMenu",
+                    // "introduction/user-guide/general-layout/sideNavigationMenu",
+                    "introduction/user-guide/general-layout/toolbar",
+                    "introduction/user-guide/general-layout/annotate-toolbar",
+                  ],
+                },
+                {
+                  type: "category",
+                  label: "Annotate Mode",
+                  items: [
+                    "introduction/user-guide/annotate-mode/annotate-mode",
                   ],
                 },
               ],
             },
+
             "introduction/iframe",
             "introduction/controllingUI",
           ],

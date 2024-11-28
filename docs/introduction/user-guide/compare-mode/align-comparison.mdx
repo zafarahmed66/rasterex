@@ -1,0 +1,69 @@
+---
+title: Align Comparison
+---
+
+import aligncomparison1 from "./img/align-comparison/align-comparison1.png";
+import aligncomparison2 from "./img/align-comparison/align-comparison2.png";
+import aligncomparison3 from "./img/align-comparison/align-comparison3.png";
+import aligncomparison4 from "./img/align-comparison/align-comparison4.png";
+import aligncomparison5 from "./img/align-comparison/align-comparison5.png";
+import aligncomparison6 from "./img/align-comparison/align-comparison6.png";
+import aligncomparison7 from "./img/align-comparison/align-comparison7.png";
+
+<img src={aligncomparison1} alt="aligncomparison1" />
+
+The alignment process is distinct from editing and can be accessed through the **Edit menu** located at the top left-hand corner of the document viewer. This feature ensures that compared files are properly aligned for accurate results.
+
+---
+
+#### Accessing the Alignment Tool  
+1. **Edit Menu**:  
+   - Click on the **Edit** menu in the top-left corner.  
+    <img src={aligncomparison2} alt="aligncomparison2" />
+
+   - Select the **Align** option from the expandable list.
+
+2. **Align Mode Activation**:  
+    <img src={aligncomparison3} alt="aligncomparison3" />
+
+   - Upon activation, the viewer displays each document in a row, enabling users to utilize the alignment tool to set points for improved comparison.
+
+---
+
+#### Using the Alignment Tool  
+- **X and Y Axes**:  
+  - The tool features X and Y axes along with a **central square** indicating where the first alignment point should be placed.  
+  - Users can choose any part of the drawing they consider essential for alignment.
+
+- **Snap Feature**:  
+    <img src={aligncomparison4} alt="aligncomparison4" />
+
+  - The square can snap to various parts of the drawing, enhancing precision and ensuring accurate placement of alignment points.
+
+1. **First Alignment Point**:  
+    <img src={aligncomparison5} alt="aligncomparison5" />
+
+   - Set the first point on the first document.  
+   - The tool then requests the next alignment point, creating a line used as a reference for alignment.
+
+2. **Second Alignment Point**:  
+   - Repeat the process on the second document to complete the alignment.
+
+---
+
+#### Generating Aligned Comparison  
+    <img src={aligncomparison6} alt="aligncomparison6" />
+
+- Once all points are set:  
+  - The comparison is regenerated with the updated alignment.  
+  - The **UI is locked** and a progress bar displays the alignment process.  
+  - Upon completion, the newly aligned comparison appears in the viewer, and the loader is dismissed.
+
+---
+
+#### Additional Alignment Options  
+    <img src={aligncomparison7} alt="aligncomparison7" />
+
+- Users can repeat the alignment process multiple times until they are satisfied with the results.  
+- **Note**: Once a markup is placed on the canvas, further alignment adjustments are disabled, and only saving options are available.
+

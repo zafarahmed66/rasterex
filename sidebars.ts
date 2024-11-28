@@ -96,6 +96,20 @@ const sidebars: SidebarsConfig = {
                     "introduction/user-guide/annotate-mode/saving-the-annotations",
                   ],
                 },
+                {
+                  type: "category",
+                  label: "Compare Mode",
+                  items: [
+                    "introduction/user-guide/compare-mode/intro",
+                    "introduction/user-guide/compare-mode/create-compare",
+                    "introduction/user-guide/compare-mode/compare-mode",
+                    "introduction/user-guide/compare-mode/edit-comparison",
+                    "introduction/user-guide/compare-mode/align-comparison",
+                    "introduction/user-guide/compare-mode/revision-cloud",
+                    "introduction/user-guide/compare-mode/tutorial",
+                    "introduction/user-guide/compare-mode/save",
+                  ],
+                },
               ],
             },
 

@@ -1,0 +1,82 @@
+---
+title: Viewing and Editing Signature
+---
+
+import collapsemenu from "./img/viewing-and-editing-signature/collapse-menu.png";
+import createsignature from "./img/viewing-and-editing-signature/create-signature.png";
+import initialspreview from "./img/viewing-and-editing-signature/initials-preview.png";
+import initials from "./img/viewing-and-editing-signature/initials.png";
+import modal1 from "./img/viewing-and-editing-signature/modal1.png";
+import modal2 from "./img/viewing-and-editing-signature/modal2.png";
+import modal3 from "./img/viewing-and-editing-signature/modal3.png";
+import moremenu from "./img/viewing-and-editing-signature/more-menu.png";
+import signaturepreview from "./img/viewing-and-editing-signature/signature-preview.png";
+import signature from "./img/viewing-and-editing-signature/signature.png";
+import viewingediting from "./img/viewing-and-editing-signature/viewing-editing.png";
+import viewingediting2 from "./img/viewing-and-editing-signature/viewing-editing2.png";
+
+<img src={viewingediting} alt="viewingediting"  />
+
+When a user has created a signature and initials pair, they can view and edit the signature and initials anytime from the **Signature** menu in the side navigation of the viewer. This menu provides several options to manage and interact with the signature and initials, as described below.
+
+<img width={"300px"} src={viewingediting2} alt="viewingediting2"  />
+
+## Elements in the Signature Menu:
+
+### 1. Collapse Menu Icon
+<img width={"300px"} src={collapsemenu} alt="collapsemenu"  />
+
+- This icon allows the user to hide the Signature menu, maximizing the drawing area for document editing.
+
+### 2. Create Signature Icon
+<img width={"300px"} src={createsignature} alt="createsignature"  />
+
+- Allows the user to start the signature creation process, which is detailed in a previous section of the document.
+
+### 3. Initials
+<img width={"300px"} src={initials} alt="initials"  />
+
+- Displays the user's initials preview, which can be managed or placed within the document.
+  - **Initials Preview**: Shows the created initials. The user can drag them onto the document for placement.
+    
+    <img width={"300px"} src={initialspreview} alt="initialspreview" />
+
+  - **More Menu**: Provides additional options for managing and placing the initials:
+    
+    <img width={"300px"} src={moremenu} alt="moremenu" />
+
+    - **Use in all blocks**: This option places the initials in all signing blocks within the current document.
+    - **Edit**: Opens the editing modal to modify the initials (described below).
+
+### 4. Signature
+<img width={"300px"} src={signature} alt="signature" />
+
+- Displays the created signature preview, which can also be managed or placed within the document.
+
+  - **Signature Preview**: Shows the created signature. The user can drag it onto the document for placement.
+   
+    <img width={"300px"} src={signaturepreview} alt="signaturepreview" />
+
+  - **More Menu**: Provides additional options for managing and placing the signature:
+   
+    <img width={"300px"} src={moremenu} alt="moremenu" />
+
+    - **Use in all blocks**: Places the signature in all signing blocks in the document.
+    - **Edit**: Opens the editing modal to modify the signature (described below).
+
+### 5. Preview Signature in Document
+<img width={"300px"} src={modal1} alt="modal1" />
+
+- Clicking on the signing field in the document opens a modal displaying the preview of the existing signature and initials.
+
+## Editing the Signature and Initials
+<div>
+<img width={"300px"} src={modal2} alt="modal2" />
+<img width={"300px"} src={modal3} alt="modal3" />
+</div>
+- The user can edit their signature and initials by accessing the editing modal, which functions similarly to the creation modal but with only one editable area (either for signature or initials).
+- The editing options include the same methods as the creation flow: **draw**, **type**, or **upload**. Each method has its respective attributes for customization, such as color and thickness for drawing, or selecting fonts for typed signatures.
+- Once edited, the user can click the **Create** button to save the updated signature or initials. This action will overwrite the previous version with the new one.
+- If the user chooses not to save their changes, they can exit the modal using the **Cancel** button or the close icon.
+
+By providing these features, users have full control over creating, editing, and managing their signature and initials within the viewer, ensuring flexibility and ease of use for electronic signing.

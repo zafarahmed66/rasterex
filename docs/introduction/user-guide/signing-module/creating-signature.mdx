@@ -1,0 +1,209 @@
+---
+title: Creating Signature
+---
+
+import colors from "./img/creating-signature/colors.png";
+import colors2 from "./img/creating-signature/colors2.png";
+import creatingsignature1 from "./img/creating-signature/creating-signature1.png";
+import creatingsignature2 from "./img/creating-signature/creating-signature2.png";
+import creatingsignature3 from "./img/creating-signature/creating-signature3.png";
+import drawinitial from "./img/creating-signature/draw-initial.png";
+import drawintial2 from "./img/creating-signature/draw-intial2.png";
+import drawsignaturearea from "./img/creating-signature/draw-signature-area.png";
+import drawsignaturearea2 from "./img/creating-signature/draw-signature-area2.png";
+import draw from "./img/creating-signature/draw.png";
+import grayscale from "./img/creating-signature/grayscale.png";
+import grayscale2 from "./img/creating-signature/grayscale2.png";
+import image from "./img/creating-signature/image.png";
+import initialinput from "./img/creating-signature/initial-input.png";
+import initialinput2 from "./img/creating-signature/initial-input2.png";
+import initialuploadarea from "./img/creating-signature/initial-upload-area.png";
+import initialuploadarea2 from "./img/creating-signature/initial-upload-area2.png";
+import initialuploadarea3 from "./img/creating-signature/initial-upload-area3.png";
+import input from "./img/creating-signature/input.png";
+import input2 from "./img/creating-signature/input2.png";
+import previewinitials from "./img/creating-signature/preview-initials.png";
+import previewsignature from "./img/creating-signature/preview-signature.png";
+import replaceimage from "./img/creating-signature/replace-image.png";
+import signaturestyle from "./img/creating-signature/signature-style.png";
+import signaturestyle2 from "./img/creating-signature/signature-style2.png";
+import signatureuploadarea from "./img/creating-signature/signature-upload-area.png";
+import signatureuploadarea2 from "./img/creating-signature/signature-upload-area2.png";
+import thickness from "./img/creating-signature/thickness.png";
+import typesignature from "./img/creating-signature/type-signature.png";
+import validation from "./img/creating-signature/validation.png";
+import validation2 from "./img/creating-signature/validation2.png";
+
+### Signature and Initials Creation
+
+A user can create their own signature when opening the signing mode for the first time or any subsequent time until both the signature and initials are created. After these are created, the user can only **edit** the existing signature and initials; adding multiple pairs is not allowed in the viewer.
+
+- **Signature and Initials Retrieval**: 
+    - **WebClientGetInitial** and **WebClientGetSignature** methods of the `RxCSISAPI.dll` are used to retrieve the signature and initials respectively.
+    - **Creation and Editing**: These are done using **WebClientPutInitial** and **WebClientPutSignature** methods of the `RxCSISAPI.dll`.
+
+<img width="300px" src={creatingsignature1} alt="creatingsignature1" />
+
+
+---
+
+#### Accessing the Signature Creation Flow
+
+The user can initiate the creation of their signature and initials through the following methods:
+
+1. **From the "Signature" Menu**: 
+   - Located in the side navigation menu, it provides access to create or edit signature/initials.
+
+2. **Using the “Create Signature” Shortcut**:
+   - Available in the dropdown when a user clicks on any existing signing field within the current drawing.
+
+Both methods lead to the **Create Signature Modal**, where users can start creating their signature and initials to be used within the viewer.
+
+<img width="300px" src={creatingsignature2} alt="creatingsignature2" />
+
+
+---
+
+#### Signature Creation Methods
+<img width="500px" src={creatingsignature3} alt="creatingsignature3" />
+
+The modal offers several ways to create and define the signature and initials.
+
+##### 1. **Draw Method**
+<img width="500px" src={draw} alt="draw" />
+
+Users can create their signature and initials using a drawing interface with the following options:
+
+- **Colors**: 
+    <img width="300px" src={colors} alt="colors" />
+
+  - Users can select from predefined colors for the brush (blue, black, or red).
+  - **Note**: Changing the color clears the signature/initials, requiring the user to start again.
+
+- **Thickness**: 
+    <img width="300px" src={thickness} alt="thickness" />
+
+  - Allows users to choose the brush thickness for drawing their signature or initials.
+  - **Note**: Changing the thickness also clears any previous drawings.
+
+- **Draw Signature Area**: 
+    <img width="300px" src={drawsignaturearea} alt="drawsignaturearea" />
+
+  - Users can draw their signature using the chosen color and thickness settings.
+   
+    <img width="300px" src={drawsignaturearea2} alt="drawsignaturearea2" />
+
+  - Once drawing begins, the **"Draw signature"** tooltip changes to **"Clear Signature"**, allowing the user to reset the signature if needed.
+
+- **Draw Initials Area**: 
+    <img width="300px" src={drawinitial} alt="drawinitial" />
+
+  - Similar to the signature area, users can draw their initials.
+    
+    <img width="300px" src={drawintial2} alt="drawintial2" />
+
+  - The **"Draw Initials"** tooltip turns into a **"Clear Initials"** button after starting the drawing, enabling the user to erase and restart if necessary.
+
+##### 2. **Type Signature**
+<img width="500px" src={typesignature} alt="typesignature" />
+
+Users can generate a signature and initials based on text input:
+
+- **Full Name Input**:
+   
+    <img width="300px" src={input} alt="input" />
+    
+  - A mandatory field to enter the full name (or part of the name) used to generate the visual signature.
+    
+    <img width="300px" src={input2} alt="input2" />
+
+  
+- **Initials Input**:
+    <img width="300px" src={initialinput} alt="initialinput" />
+
+  - A mandatory field to enter initials used for generating the visual initials.
+
+    <img width="300px" src={initialinput2} alt="initialinput2" />
+
+- **Colors**:
+    <img width="300px" src={colors2} alt="colors2" />
+
+  - Users can select from predefined colors (blue, black, or red) for the signature and initials.
+
+- **Signature Style**:
+    <img width="300px" src={signaturestyle} alt="signaturestyle" />
+
+  - Users can pick a predefined font style for the signature and initials from a dropdown list.
+    
+    <img width="300px" src={signaturestyle2} alt="signaturestyle2" />
+
+
+- **Preview Signature**:
+    <img width="300px" src={previewsignature} alt="previewsignature" />
+
+  - A preview area shows the generated visual of the signature based on the name, color, and style chosen.
+
+- **Preview Initials**:
+    <img width="300px" src={previewinitials} alt="previewinitials" />
+
+  - Similarly, a preview area displays the generated initials based on the initials input, color, and style.
+
+##### 3. **Image Upload Method**
+    
+<img width="300px" src={image} alt="image" />
+
+Users can upload an image of their handwritten signature and initials:
+
+- **Signature Upload Area**:
+    <img width="300px" src={signatureuploadarea} alt="signatureuploadarea" />
+
+  - Users can drag and drop or use the **Upload** button to select and upload an image of their signature.
+    
+    <img width="300px" src={signatureuploadarea2} alt="signatureuploadarea2" />
+
+  - Once uploaded, a preview of the signature appears in the upload area.
+  
+  - **Grayscale**: 
+    <img  src={grayscale} alt="grayscale" />
+
+    - Users can convert the uploaded signature to grayscale for improved readability.
+    
+    <img width="300px" src={grayscale2} alt="grayscale2" />
+
+  - **Replace Image**: 
+    <img width="300px" src={replaceimage} alt="replaceimage" />
+
+    - The user can replace the uploaded signature image by clicking the **Replace Image** button, opening the file explorer.
+
+- **Initials Upload Area**:
+    <img width="300px" src={initialuploadarea} alt="initialuploadarea" />
+
+  - Users can similarly upload an image of their initials.
+    
+    <img width="300px" src={initialuploadarea2} alt="initialuploadarea2" />
+
+  - **Grayscale** and **Replace Image** options are also available for the initials image.
+   
+    <img width="300px" src={initialuploadarea3} alt="initialuploadarea3" />
+
+
+---
+
+#### Validation and Saving the Signature and Initials
+<div>
+    <img width="300px" src={validation} alt="validation" />
+    <img width="300px" src={validation2} alt="validation2" />
+</div>
+
+- **Mandatory Fields**: Both the signature and initials must be provided; users cannot create only one or leave both fields blank.
+- If a user tries to save without completing both fields, a validation message will be displayed: **"Both fields are required."**
+
+Once both fields are filled and validated, the user can save their signature and initials by clicking the **Create** button in the modal. The signature and initials can then be used for e-signing documents.
+
+#### Exiting the Modal
+
+- **Cancel Button**: Users can leave the modal without saving by clicking the **Cancel** button or the close icon.
+
+---
+
+This structure ensures that the signature creation process is clear and user-friendly, while also enforcing necessary validations and providing options for customization.

@@ -110,6 +110,18 @@ const sidebars: SidebarsConfig = {
                     "introduction/user-guide/compare-mode/save",
                   ],
                 },
+                {
+                  type: "category",
+                  label: "Signing Module",
+                  items: [
+                    "introduction/user-guide/signing-module/intro",
+                    "introduction/user-guide/signing-module/signing-field-identification",
+                    "introduction/user-guide/signing-module/creating-signature",
+                    "introduction/user-guide/signing-module/viewing-and-editing-signature",
+                    "introduction/user-guide/signing-module/placing-signature",
+                  ],
+                },
+                "introduction/user-guide/signing-module/other-menus",
               ],
             },
 

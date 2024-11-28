@@ -1,0 +1,38 @@
+---
+title: Signing Field Identification
+---
+
+import signingfieldidentification from "./img/signing-field-identification/signing-field-identification.png";
+
+
+The viewer provides capabilities for defining and managing signing fields in the following ways:
+
+---
+
+#### 1. Pre-Defined Text
+
+In this method, the signature field is embedded as **invisible text** within the document. The viewer locates these fields using the `RxCore.getTextRects("Sign Here", true)` method.
+
+- **Text Search**: The viewer initiates a search for the phrase **"Sign Here"**.
+- **Invisible Text**: The PDF is pre-created with this text in the correct locations, using white text to ensure it remains invisible.
+- **Callback Function**: The `RxCore.getTextRects` method includes a callback that returns the results of the text search.
+- **Sign Button Appearance**: Wherever this text is found, a **Sign Button** will appear, allowing users to sign at those locations.
+
+---
+
+#### 2. Custom Sign Button
+
+<img src={signingfieldidentification} alt="signingfieldidentification" />
+
+Users can place custom signing fields manually via the **Signature Menu**:
+
+- **Drag-and-Drop Interface**: Accessible from the side navigation menu, this feature allows users to place a signing field anywhere in the document.
+- **Custom Markup**: The signing field can be added as a custom markup element.
+
+> **Note**: Although development of the custom sign button feature is nearly complete, it is not available in the current version of the viewer due to a project pause.
+
+---
+
+These features ensure flexibility in defining signing areas, with further updates planned as development progresses.
+
+

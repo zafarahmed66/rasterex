@@ -1,0 +1,92 @@
+---
+title: Placing Signature/ Initials to Drawing
+---
+
+import applysignature1 from "./img/placing-signature/apply-signature1.png";
+import applysignature2 from "./img/placing-signature/apply-signature2.png";
+import applysignature3 from "./img/placing-signature/apply-signature3.png";
+import freesignatureplacement from "./img/placing-signature/free-signature-placement.png";
+import initialflowing from "./img/placing-signature/initial-flowing.png";
+import sidesignaturemenu from "./img/placing-signature/side-signature-menu.png";
+import signature from "./img/placing-signature/signature.png";
+import signingfield1 from "./img/placing-signature/signing-field1.png";
+import signingfield2 from "./img/placing-signature/signing-field2.png";
+import signingfield3 from "./img/placing-signature/signing-field3.png";
+import success from "./img/placing-signature/success.png";
+
+## Signing Field
+The first way to add a signature to the document is through the signing field that is present within the document itself. If the document contains at least one signing field, the user will see the **"Click to Sign"** button in the designated space for the signature.
+
+<img width={"300px"} src={signingfield1} alt="signingfield1" />
+
+- Once the user clicks the button, a modal will appear near the button, showing the current saved initials and signature, or suggesting the creation of a new signature pair if none exist.
+
+<img width={"300px"} src={signingfield2} alt="signingfield2" />
+
+- Clicking on **"Create new signature"** allows the user to begin the process of creating the initials and signature, as described in a previous section of this document. After the signatures are created, the user can access this menu again to select the created signature or initials for placement in the signing field.
+- If a signature and initials pair already exists, the user can directly select it from the menu.
+
+Based on which part of the pair the user selects, either the signature or initials will be placed in the signing field, and the signature or initials preview will replace the **"Click to Sign"** button.
+
+<img width={"300px"} src={signingfield3} alt="signingfield3" />
+
+A user will be requested to apply the signature after placing it. The **Apply Signature** flow is described in a separate section of this document.
+
+---
+
+## Side Signature Menu
+
+The user can apply the signature or initials to all signing fields available in the currently viewed document using the **Side Signature Menu** in the viewer’s side navigation.
+
+<img width={"600px"} src={sidesignaturemenu} alt="sidesignaturemenu" />
+
+This can be achieved by:
+- Clicking the **More** button near the initials or signature item in the side menu.
+- Selecting the **"Use in all blocks"** option, which will apply the signature to all signature blocks in the document and prompt the user to apply the signature.
+
+The **Apply Signature** flow is described in a separate section of this document.
+
+---
+
+## Free Signature Placement
+<img width={"600px"}  src={freesignatureplacement} alt="freesignatureplacement" />
+
+The newly designed signature module intends to allow users to place signatures or initials anywhere in the document by simply using a drag-and-drop function. The user can drag any signature or initials from the **"Signature"** menu in the side navigation to any location within the drawing as a custom markup.
+
+**Note**: This feature is not fully implemented as the project has been put on hold.
+
+---
+
+## Initialing Flow
+The initialing flow was intended to be available in the signature side menu of the side navigation menu's **More** section. This feature would allow users to place the initials on every page of the document, either in the top-left, top-right, bottom-left, or bottom-right corners of all pages, depending on the user’s selection.
+
+<img width={"600px"} src={initialflowing} alt="initialflowing" />
+
+
+**Note**: This feature is not yet implemented as the project has been put on hold.
+
+---
+
+## Apply Signature
+Once the user has created and placed a signature in the document, the viewer will prompt them to apply the signature or dismiss it.
+
+<img  src={applysignature1} alt="applysignature1" />
+
+
+- The user will see a banner at the top of the page with the message: **"Click ‘Apply’ to save the signature in the document."**
+
+
+- To dismiss the signature, the user can click the **close** icon in the banner. This will trigger a modal allowing the user to confirm the signature's removal.
+
+<img width={"400px"} src={applysignature2} alt="applysignature2" />
+
+    - If the user clicks **Dismiss**, the signature will be removed, and the apply banner will be closed.
+    - The user can also close the modal without dismissing the signature for further edits by clicking **Cancel** or the **close icon**.
+
+<img width={"200px"} src={applysignature3} alt="applysignature3" />
+
+To apply the signature and save it in the document, the user must click the **Apply** button. This action will burn the signature into the document, and a toast message will confirm the successful save operation.
+
+<img width={"200px"} src={signature} alt="signature" />
+
+The user will be redirected to the document’s view mode with the applied signature.

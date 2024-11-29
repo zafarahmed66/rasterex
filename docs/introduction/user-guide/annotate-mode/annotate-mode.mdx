@@ -33,10 +33,6 @@ import countvalue2 from "./img/annotate-mode/count-value2.png";
 import count from "./img/annotate-mode/count.png";
 import ellipseexample1 from "./img/annotate-mode/ellipse-example1.png";
 import ellipse from "./img/annotate-mode/ellipse.png";
-import eraseexample1 from "./img/annotate-mode/erase-example1.png";
-import eraseexample2 from "./img/annotate-mode/erase-example2.png";
-import eraseexample3 from "./img/annotate-mode/erase-example3.png";
-import erase from "./img/annotate-mode/erase.png";
 import fillbothendsexample1 from "./img/annotate-mode/fill-both-ends-example1.png";
 import fillbothends from "./img/annotate-mode/fill-both-ends.png";
 import fillsingleendexample1 from "./img/annotate-mode/fill-single-end-example1.png";
@@ -478,20 +474,6 @@ The colors accordion allows a user to select one of the pre-defined colors for t
 The save button lets a user save the count markup that has been created. It is disabled in case no shapes are added to the canvas. When there is at least one shape created within the current markup the save button will change the state to active and allow a user to save the annotation.
 <img  src={countsave2} alt="countsave2" />
 
----
-## Erase
-<img  src={erase} alt="erase" />
-
-Provides an eraser tool for visually removing annotations or parts of annotations. The erase tool creates the drawing using the background color of the current viewed document, which covers the content of the other drawings.
-<img  src={eraseexample1} alt="eraseexample1" />
-
-Once the erase tool is selected, a user can start drawing the figure with the mouse. One is not limited in terms of number of clicks and interactions and can continue creation of the erase markup until the “Erase” tool is deselected in the annotate toolbar.
-<img  src={eraseexample2} alt="eraseexample2" />
-
-When a user deselects the erase tool, respective markup will get created and a user will be able to interact with it and move the markup. Also, the thickness modal will appear, where a user will be able to change the thickness of the erase markup created in a range of 1-12pt.
-<img  src={eraseexample3} alt="eraseexample3" />
-
-When the erase annotation is saved a user can get access to viewing and editing its properties.
 
 ---
 

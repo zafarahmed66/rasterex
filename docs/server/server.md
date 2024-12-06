@@ -424,7 +424,10 @@ LargeImageSize=4000
  
 ;Set number of concurrent RxCacheProc instances.
 MaxProcesses=1
- 
+
+;Enable or disable pre-conversion of image files (jpeg,tiff,png etc) to PDF before streaming.
+PreConvertRaster=1
+
 [PDF]
 ;Set to non-zero to disable use of PDF user unit on the server side (required by current Foxit and PDF.js implementations.)
 IgnoreUserUnit=1

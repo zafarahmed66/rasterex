@@ -1,0 +1,49 @@
+---
+title: Tutorial
+---
+
+import tutorial1 from "./img/tutorial/tutorial1.png";
+import tutorial2 from "./img/tutorial/tutorial2.png";
+import tutorial3 from "./img/tutorial/tutorial3.png";
+import tutorial4 from "./img/tutorial/tutorial4.png";
+
+
+<div style={{display: "flex"}}>
+<img width={"150px"} src={tutorial1} alt="tutorial1"/>
+<img width={"150px"} src={tutorial2} alt="tutorial2"/>
+<img width={"150px"} src={tutorial3} alt="tutorial3"/>
+</div>
+
+
+The **Tutorial Modal** serves as a guide to help users understand the **document alignment process**. It can be accessed via the **question mark icon** located in the bottom right-hand corner of the screen in **Compare Mode**.  
+
+<img  src={tutorial4} alt="tutorial4" />
+
+
+---
+
+#### Accessibility  
+- **Automatic Display**:  
+  The modal appears automatically the first time a user initiates the alignment process.  
+- **Persistent Tracking**:  
+  Local storage tracks whether the modal has been viewed. It will reappear if site data is cleared.
+
+---
+
+#### Structure of the Tutorial Modal  
+1. **Image/Text Tutorial**:  
+   - Displays a tutorial image and descriptive text at the top of the modal.
+   
+2. **Stepper**:  
+   - Indicates the current step in the tutorial process.
+   
+3. **Next/Okay Button**:  
+   - Allows users to advance to the next step or complete the tutorial.
+
+4. **Close Icon**:  
+   - Enables users to exit the tutorial at any time.
+
+---
+
+#### Future Enhancements  
+Currently, the tutorial modal is available for the **Align** function in **Compare Mode**. There are plans to extend its functionality to other modules, potentially incorporating **animated guides** for demonstration purposes in the future.

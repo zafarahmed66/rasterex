@@ -1,0 +1,110 @@
+---
+title: Other Menus
+---
+
+import filegallery from "./img/other-menus/file-gallery.png";
+import filegallery2 from "./img/other-menus/file-gallery2.png";
+import fileinfo from "./img/other-menus/file-info.png";
+import fileinfo2 from "./img/other-menus/file-info2.png";
+import fileupload from "./img/other-menus/file-upload.png";
+import fileupload2 from "./img/other-menus/file-upload2.png";
+import print from "./img/other-menus/print.png";
+
+
+The list of other menus consists of auxiliary and service components that help users access extra details or actions available, such as uploading files, viewing information about the currently opened file, and printing the document.
+
+## File Gallery
+
+<img width={"600px"} src={filegallery} alt={"filegallery"} />
+
+The **File Gallery** modal allows a user to view a set of predefined files or upload a custom file to the viewer. It consists of two tabs:
+
+### File Gallery Tab
+<img width={"600px"} src={filegallery2} alt={"filegallery2"} />
+
+This menu includes standard demo files available in the upload folder of the instance (RXserver) and hardcoded in the viewer for ease of use with predefined files. The predefined files are grouped by format, enabling the user to view operations with the exact file format they are interested in. The showcased formats include:
+- CAD Drawings
+- 3D Models
+- Plotter Files
+- Image Files
+- Office Documents
+
+The user can click on any demo file to load it into the viewer.
+
+### Upload File Tab
+<img width={"300px"} src={fileupload} alt={"fileupload"} />
+
+This tab allows users to upload their own files of supported formats to open in the viewer. Users can upload a file by:
+- Dragging the file from their local machine and dropping it into the dedicated box.
+- Clicking **"Choose on Computer"**, which opens the local browser to select a file.
+
+<img width={"300px"} src={fileupload2} alt={"fileupload2"} />
+
+
+Once a file is added, the modal will show the file name, format, size, and provide an option to remove the file by clicking the **"Remove"** icon in the file’s row. To upload a file, users need to click the **"Upload"** button, which starts the file upload process. While the file uploads, a progress bar will be displayed, blocking interactions with the viewer. Users can close the modal and cancel the upload with the **"Cancel"** button or close icon in the popup.
+
+**Note:** The UI was designed to allow bulk upload of multiple files, but at the time of implementation, RXAPI did not support this feature.
+
+---
+
+## File Info
+
+<img width={"300px"} src={fileinfo} alt={"fileinfo"} />
+<img width={"300px"} src={fileinfo2} alt={"fileinfo2"} />
+
+
+The **File Info** modal allows users to view and inspect the details of the currently opened file. The content may vary depending on the file format but generally includes two tabs with the following information:
+
+- **Attribute:**
+  - DPI
+  - File Format
+  - File Name
+  - File Size
+  - Image Depth
+  - Image Depth Units
+  - Image Height
+  - Image Width
+  - Offset X
+  - Offset Y
+  - Pages
+  - Properties
+  - XRefs
+  - Image Height Units
+  - Image Width Units
+
+- **Font:**
+  - Lists the font files (e.g., "Txt.shx" and "Simplex.shx") commonly used for text rendering in the CAD environment.
+
+This information offers users comprehensive insights into various attributes and properties of the file, enhancing their understanding of its characteristics and specifications.
+
+---
+
+## Print
+
+<img width={"300px"} src={print} alt={"print"} />
+
+
+The **Print** modal facilitates the printing of documents and contains the following elements:
+
+- **Select Paper Size Dropdown:**
+  This dropdown menu allows users to select the paper size on which they want to print the document. Available options include:
+  - A4
+  - Letter
+  - ANSI
+  - ARCH
+
+- **Select Paper Orientation:**
+  Users can choose the paper orientation, either:
+  - Portrait mode (vertical)
+  - Landscape mode (horizontal)
+  - Auto settings
+
+This selection determines how the content will be arranged on the printed page.
+
+- **Cancel Button / Close Icon:**
+  The **Cancel** button or **close icon** allows users to exit the print modal without proceeding with the printing process. Clicking this button dismisses the modal without initiating printing.
+
+- **Print Button:**
+  The **Print** button confirms the selected print settings and initiates the printing process, sending the document to the system’s print window.
+
+**Note:** The design file includes more robust print settings, but at the time of implementation, RXAPI did not provide support for all the designed settings.

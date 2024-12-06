@@ -1,0 +1,110 @@
+---
+title: Comment list
+---
+
+import apply from "./img/note-annotations-and-menu/apply.png";
+import author from "./img/note-annotations-and-menu/author.png";
+import cancel from "./img/note-annotations-and-menu/cancel.png";
+import createdby from "./img/note-annotations-and-menu/created-by.png";
+import createdlist from "./img/note-annotations-and-menu/created-list.png";
+import cross from "./img/note-annotations-and-menu/cross.png";
+import dateofcreation from "./img/note-annotations-and-menu/date-of-creation.png";
+
+import noteannotationsmenu from "./img/note-annotations-and-menu/note-annotations-menu.png";
+
+import commentlist from "./img/note-annotations-and-menu/commtlist.png";
+
+import sortby from "./img/note-annotations-and-menu/sortby.png";
+
+
+
+
+import dialog from "./img/note-annotations-and-menu/dialog.png";
+import dialog2 from "./img/note-annotations-and-menu/dialog2.png";
+import filter from "./img/note-annotations-and-menu/filter.png";
+import info from "./img/note-annotations-and-menu/info.png";
+import inputtext from "./img/note-annotations-and-menu/input-text.png";
+import inputtext2 from "./img/note-annotations-and-menu/input-text2.png";
+import noteannotationsmenuupdated from "./img/note-annotations-and-menu/note-annotations-menu-updated.png";
+import notes from "./img/note-annotations-and-menu/notes.png";
+import post from "./img/note-annotations-and-menu/post.png";
+import post2 from "./img/note-annotations-and-menu/post2.png";
+import searchfield from "./img/note-annotations-and-menu/search-field.png";
+import searchfield2 from "./img/note-annotations-and-menu/search-field2.png";
+import sort from "./img/note-annotations-and-menu/sort.png";
+import sort2 from "./img/note-annotations-and-menu/sort2.png";
+import timestamp from "./img/note-annotations-and-menu/timestamp.png";
+import update from "./img/note-annotations-and-menu/update.png";
+import update2 from "./img/note-annotations-and-menu/update2.png";
+import username from "./img/note-annotations-and-menu/username.png";
+
+The comment list allows for the possibility of viewing, sorting, and filtering annotations and measurements.
+
+<img style={{height: "500px"}} src={commentlist} alt="commentlist" />
+
+
+### Interacting with annotations in the comment list.
+Once an annotation is created on the drawing, they will be displayed in the "comment list" menu, allowing the user to browse and search for annotations. Clicking on an annotation in the list will select the respective annotation.
+<!--<img style={{height: "500px"}} src={noteannotationsmenuupdated} alt="noteannotationsmenuupdated" />-->
+
+---
+
+### comment list Interaction
+In this menu, the user can view and interact with the existing annotations using the following elements:
+
+- **Search Field**  
+    <!--<img src={searchfield} alt="searchfield" />-->
+  Using the search field, the user can search for specific annotations by entering a query. Once the input is filled, the annotations list will filter to show only the annotations containing the matching expression.  
+    <!--<img src={searchfield2} alt="searchfield2" />-->
+  A user can remove the search query to reset the search.
+
+- **Sorting Options**  
+    <img src={sortby} alt="sortby" /> 
+  The sort dropdown allows the user to set the criteria by which the annotations are sorted in the list. The available sorting criteria are:
+
+  
+  - **Created**  
+    This option sorts the annotations by the date and time of their creation, with the most recent annotations at the top.
+  
+  - **Author**  
+    This option sorts the annotations by the names of their authors in descending alphabetical order.
+  
+  - **Page**  
+    This option sorts the annotations by the page on which the annotation is placed.
+
+  - **Position**  
+    This option sorts the annotations by the position of the annotation on the page.
+
+  - **Annotation type**  
+    This option sorts the annotations by type of annotation.
+
+
+
+- **Filters**  
+    <img  src={filter} alt="filter" /> 
+
+  The filters menu provides access to advanced filtering options, allowing the user to adjust the data presented in the list to match the filter criteria. Available filters include:
+  - **Created by**  
+    <img  src={createdby} alt="createdby" /> 
+
+    Allows the user to select the user(s) whose sticky annotations should be displayed in the annotations list. A user can be selected or unselected by adding or removing a checkmark next to their name.
+
+  - **Date of annotations Creation**  
+    <img  src={dateofcreation} alt="dateofcreation" /> 
+
+    Allows the user to select a specific date or range of dates to display annotations from that period. Default periods include today, past 7 days, past 14 days, and past 30 days. Users can also manually set the start and end date by clicking on the calendar.
+
+- **Apply**  
+    <img  src={apply} alt="apply" /> 
+  After defining the filter parameters, the user can click the "Apply" button to activate the selected filter. The “Filter” icon in the annotations menu will be highlighted to indicate active filtering.
+
+---
+
+### Exiting the Comment list
+    <img  src={notes} alt="notes" /> 
+    <img  src={cancel} alt="cancel" /> 
+When all interactions with the sticky note markups are complete, the user can close the notes menu to exit the note creation mode. This can be done by either:
+- Clicking on the active note icon in the annotation toolbar, or
+- Clicking the close icon located in the top right-hand corner of the notes menu.
+
+After the notes menu is closed, the user will be able to use the zoom and pan options without creating a sticky note markup when clicking on the canvas.

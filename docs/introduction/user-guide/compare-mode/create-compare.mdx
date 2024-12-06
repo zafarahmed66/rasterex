@@ -1,0 +1,95 @@
+---
+title: Create Compare
+---
+import color from "./img/create-compare/color.png";
+import color2 from "./img/create-compare/color2.png";
+import compare from "./img/create-compare/compare.png";
+import createcompare1 from "./img/create-compare/create-compare1.png";
+import createcompare2 from "./img/create-compare/create-compare2.png";
+import files from "./img/create-compare/files.png";
+import files2 from "./img/create-compare/files2.png";
+import modal from "./img/create-compare/modal.png";
+import newfile from "./img/create-compare/new-file.png";
+import openedfile from "./img/create-compare/opened-file.png";
+import stateselector from "./img/create-compare/state-selector.png";
+import success from "./img/create-compare/success.png";
+import tooltip from "./img/create-compare/tooltip.png";
+
+### Creating Compare Overlay in the Viewer  
+<img src={createcompare1} alt="createcompare1" />
+Within the viewer, users can create a document comparison overlay using several methods. These options are detailed below:
+
+---
+
+#### Option 1: Using the "Compare" Item in the Hamburger Menu  
+<img src={createcompare2} alt="createcompare2" />
+
+1. **Access the Compare Modal**  
+   - Click on the **"Compare"** option in the hamburger menu to open the compare modal.
+
+2. **Elements of the Compare Modal**:  
+    <img src={files} alt="files" />
+
+   - **Files**:  
+     - The currently opened file will be pre-selected in the first field.  
+        <img src={files2} alt="files2" />
+     - Use the second dropdown to choose another file for comparison, either from the currently opened files or by uploading a new file.  
+   
+   - **Selecting an Opened File**:  
+        <img src={openedfile} alt="openedfile" />
+     - Click the desired file’s name to select it for comparison. The selected file will be highlighted in the dropdown.  
+
+   - **Opening a New File**:  
+        <img src={newfile} alt="newfile" />
+     - Click **"Select new document"** to open the file gallery modal and upload a file from local storage.  
+
+   - **State Selector**:  
+        <img src={stateselector} alt="stateselector" />
+     - Use the **arrow buttons** to swap the order of the files, determining which file acts as the overlay or background.  
+
+   - **Color Selector**:  
+        <img src={color} alt="color" />
+     - Choose individual colors for each file to highlight differences. The matching sections will remain in grayscale. Default colors include black, red, green, and blue.  
+       
+        <img src={color2} alt="color2" />
+
+   - **Compare**:  
+        <img src={compare} alt="compare" />
+     - Confirms selections and initiates the comparison request to the server. A progress bar locks the user interface until the process is complete.  
+
+   - **Cancel Button**:  
+     - Dismisses the compare modal without initiating the comparison.
+
+3. **Compare Mode**  
+   - Once the comparison is ready, the user is directed to the compare mode, where the results are displayed in the viewer.
+
+---
+
+#### Option 2: Drag-and-Drop Comparison  
+
+1. **Top Navigation Menu**  
+   - Ensure at least two compare-compatible files are open in the viewer.  
+   - Drag one file’s tab over another file’s tab to trigger the comparison.
+
+2. **3D/BIM Model Limitation**  
+   - Drag-and-drop comparison is only available for 2D file formats. Dragging a 3D/BIM model will not work.
+
+3. **Tooltip Guidance**  
+    <img src={tooltip} alt="tooltip" />
+
+   - A tooltip will appear, prompting users to drop the file to initiate comparison. To cancel, release the file anywhere in the navigation bar.
+
+4. **Auto-Prefill in Modal**  
+    <img src={modal} alt="modal" />
+
+   - The dragged file is automatically set as the overlay, while the file it is dropped on becomes the background.  
+   - Users can change file positions, select new colors, or choose other files as needed.
+
+---
+
+### Completion and Interaction  
+<img src={success} alt="success" />
+
+Once the comparison is generated and the progress bar disappears:  
+- A **toast message** will notify the user that the comparison is ready.  
+- The user can then interact with the generated comparison file in the viewer.

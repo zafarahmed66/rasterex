@@ -1,0 +1,274 @@
+---
+title: Top Navigation Menu
+---
+
+import topNavigation from "./img/top-navigation/top-navigation.png";
+import logo1 from "./img/top-navigation/company-logo1.png";
+import logo2 from "./img/top-navigation/company-logo2.png";
+import home from "./img/top-navigation/home-icon.png";
+import hamburger from "./img/top-navigation/hamburger-icon.png";
+import fileOpen from "./img/top-navigation/file-open-icon.png";
+import fileSave from "./img/top-navigation/file-save-icon.png";
+import fileExport from "./img/top-navigation/file-export-icon.png";
+import filePrint from "./img/top-navigation/file-print-icon.png";
+import fileCompare from "./img/top-navigation/file-compare-icon.png";
+import fileInfo from "./img/top-navigation/file-info-icon.png";
+import saveSuccess from "./img/top-navigation/save-success.png";
+import fileNavigation from "./img/top-navigation/file-navigation-bar.png";
+import closeFile1 from "./img/top-navigation/close-file1.png";
+import closeFile2 from "./img/top-navigation/close-file2.png";
+import activeViwedFile from "./img/top-navigation/active-viewed-file.png";
+import activeViwedComparison from "./img/top-navigation/active-viewed-comparison.png";
+import openedInactiveComparison from "./img/top-navigation/opened-inactive-comparison.png";
+import activeViewedOriginal from "./img/top-navigation/active-viewed-original.png";
+import inactiveViewedOriginal from "./img/top-navigation/inactive-viewed-original.png";
+import openedInactiveFile from "./img/top-navigation/opened-inactive-file.png";
+import viewModeSwitcher from "./img/top-navigation/view-mode-switcher.png";
+import view from "./img/top-navigation/view.png";
+import annotate from "./img/top-navigation/annotate.png";
+import revision from "./img/top-navigation/revision.png";
+import signature from "./img/top-navigation/signature.png";
+import measure from "./img/top-navigation/measure.png";
+import moreMenu from "./img/top-navigation/more-menu.png";
+
+
+
+
+<img src={topNavigation} alt="Top navigation bar" />
+
+The top navigation menu allows a user to interact with the documents and view modes of the Viewer, enabling access to the following menus:
+
+---
+
+### Company Logo
+
+<div>
+  <img src={logo1} alt="Company Logo" />
+  <img src={logo2} alt="Company Logo" />
+</div>
+
+The logo is positioned in the top left-hand corner of the page within the top navigation menu, serving the purpose of branding and visual identification.
+
+- Clicking on the logo does not currently initiate any navigation action.
+
+{/* ---
+
+### Home Icon
+
+<img src={home} alt="Home Icon" />
+
+The home icon, located within the top navigation bar, facilitates user navigation.
+
+- **Design Intent**: It is intended to direct users to the homepage of the viewer, such as the recent files list, or to the homepage of an SDK demo.
+- **Current Functionality**: Clicking the home icon does not currently trigger any navigation action. */}
+
+---
+
+### Hamburger Menu
+
+<img src={hamburger} alt="Home Icon" />
+
+The hamburger menu provides users with access to a core set of actions for interacting with files.
+
+- **Accessing Actions**: Users can open the hamburger menu to perform various file-related tasks.
+
+---
+
+### File-Related Tasks:
+
+1. **Open**
+
+   <img src={fileOpen} alt="File Open Icon" />
+
+   - Triggers the display of a modal, enabling users to select a file for presentation within the viewer.
+   - The modal serves as an interface for browsing and selecting files from the system or external sources.
+
+2. **Save**
+
+   <img src={fileSave} alt="File Save Icon" />
+
+
+   The **"Save"** option enables users to store the markup layer containing annotations created on the currently viewed file.
+
+- **Functionality**: Upon selecting this option, the `WebClientSaveMarkup` method of `RxCSISAPI.dll` is invoked to execute the save action.
+- **Feedback**: After successfully saving the markup layer, users are presented with a confirmation message:  
+  _"Markups have been successfully saved."_  
+
+  {" "}
+
+  <img src={saveSuccess} alt="Save Success" />
+
+---
+
+### Export
+
+{" "}
+
+<img src={fileExport} alt="File Export Icon" />
+
+The **"Export"** option allows users to initiate the export of the currently viewed file, along with the created annotations, as a PDF file available for download.
+
+- **Functionality**: This is achieved by invoking the `WebClientSaveAs` method of `RxCSISAPI.dll`.
+- **Process**:
+  - Upon initiation, the resulting export-ready file is presented in a new browser tab.
+  - Users can download the exported PDF file from this tab.
+  - The file is stored in the cache folder of `rxBinweb`, enabling users to view and share it outside of the web viewer.
+
+---
+
+### Print
+
+<img src={filePrint} alt="File Print Icon" />
+
+The **"Print"** option allows users to initiate the display of a modal window where they can specify the parameters for printing the document.
+
+- **Further Details**: The modal window and the associated methods used for printing are described in a separate chapter of the document.
+
+---
+
+### Compare
+
+<img src={fileCompare} alt="File Compare Icon" />
+
+The **"Compare"** option enables users to open a modal window to start the compare flow for the currently viewed file.
+
+- **Further Details**: The compare flow and its process are described in a separate chapter of the document.
+
+---
+
+### File Info
+
+<img src={fileInfo} alt="File Info Icon" />
+
+The **"File Info"** option allows users to display a modal window presenting the details of the currently viewed file.
+
+- **Further Details**: The “File Info” modal is described in a separate chapter of the document.
+
+---
+
+## Files Navigation Bar
+
+<img src={fileNavigation} alt="File Navigation" />
+
+The **files navigation bar** lets users view and navigate between the files and file comparisons currently opened in the viewer.
+
+- A user may switch between the files or comparisons by clicking on the respective file or comparison tab within the files navbar.
+- Near the active opened file or comparison, a user will see the **close icon**, which allows them to close the file or disassemble the comparison.
+
+**Closing Files and Comparisons:**
+
+- Clicking the close icon near a file will close the file and remove it from the files navbar.
+- Using the close icon near a compare tile will prompt a modal window asking the user whether to save the comparison or dismiss it and close. Upon closing the comparison, the original files will be displayed separately as two single files.
+
+<div>
+  <img src={closeFile1} alt="Close File 1" />
+  <img src={closeFile2} alt="Close File 2" />
+</div>
+
+---
+
+**Types of Tiles in the Files Navbar:**
+
+1. **Active Viewed File**
+
+   <img src={activeViwedFile} alt="activeViwedFile" />
+
+   The single file currently being presented and viewed by the user.
+
+2. **Opened Inactive File**
+
+   <img src={openedInactiveFile} alt="openedInactiveFile" />
+
+   A file that is open in the viewer but not currently presented on the canvas.
+
+3. **Active Viewed Comparison**
+
+   <img src={activeViwedComparison} alt="activeViwedComparison" />
+
+   The comparison currently being viewed by the user.
+
+4. **Opened Inactive Comparison**
+
+   <img src={openedInactiveComparison} alt="openedInactiveComparison" />
+
+   A comparison that is open in the viewer but not currently being viewed.
+
+5. **Active Viewed Original File within Comparison**
+
+   <img src={activeViewedOriginal} alt="activeViewedOriginal" />
+
+   The original file being viewed within a comparison.
+
+6. **Inactive Opened Original File within Comparison**
+
+   <img src={inactiveViewedOriginal} alt="inactiveViewedOriginal" />
+
+   An original file within a comparison that is open but not currently being viewed.
+
+---
+
+### View Mode Switcher
+
+<img src={viewModeSwitcher} alt="viewModeSwitcher" />
+
+The **view mode switcher** allows users to select the mode in which they want to view the file or comparison within the viewer.
+
+- The current active view mode is presented in the top navigation bar.
+- A list of all modes can be accessed by opening the **modes dropdown**.
+
+**View Modes:**
+
+1. **View**
+
+   <img src={view} alt="view" />
+
+   - Users can see the currently presented file and access the view options toolbar (described separately).
+   - This mode is for navigating through the 2D or 3D file without specific interactions like annotations or signatures.
+   - Primarily intended for viewing and navigating the file without performing additional actions.
+
+2. **Annotate**
+
+   <img src={annotate} alt="annotate" />
+
+   - Users can view the file and create mark-ups using the annotation toolbar (described separately).
+   - This mode allows users to add annotations, notes, highlights, and other mark-up elements.
+   - Provides tools for creating and editing annotations to customize feedback or notes on the file content.
+
+2. **Measure**
+
+   <img src={measure} alt="annotate" />
+
+   - Users can measure the file and create mark-ups using the annotation toolbar (described separately).
+   - This mode allows users to measure.
+
+
+{/* 3. **Revision**
+
+   <img src={revision} alt="revision" />
+
+   - Specific to comparisons, this mode contains a limited set of mark-up options.
+   - Users can add mark-ups (e.g., clouds) to highlight differences between files.
+   - Designed to facilitate reviewing and comparing files, enabling easy identification of differences.
+
+4. **Signature**
+
+   <img src={signature} alt="signature" />
+
+   - Available for single 2D PDF files, allowing users to access electronic signature tools (described separately).
+   - Enables users to sign PDF documents electronically.
+   - Specifically tailored for handling electronic signatures within 2D PDF files.
+
+---
+
+### More Menu
+
+<img src={moreMenu} alt="moreMenu" />
+
+The **"More" menu** provides access to auxiliary options like:
+
+- **Help**
+- **Contact Support**
+- **New**
+
+**Note:**  
+These options are not currently implemented. Selecting any of these options will not result in any action being taken within the application. */}

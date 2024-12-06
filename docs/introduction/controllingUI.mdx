@@ -1,0 +1,282 @@
+---
+title: Controlling the UI
+---
+
+import img1 from "./img/controllingUI/1.png";
+import img2 from "./img/controllingUI/2.png";
+import img3 from "./img/controllingUI/3.png";
+import img4 from "./img/controllingUI/4.png";
+import img5 from "./img/controllingUI/5.png";
+import img6 from "./img/controllingUI/6.png";
+import img7 from "./img/controllingUI/7.png";
+import img8 from "./img/controllingUI/8.png";
+import img9 from "./img/controllingUI/9.png";
+import img10 from "./img/controllingUI/10.png";
+import img11 from "./img/controllingUI/11.png";
+import img12 from "./img/controllingUI/12.png";
+import img13 from "./img/controllingUI/13.png";
+import img14 from "./img/controllingUI/14.png";
+
+# Controlling the UI
+
+Setting the UI using PostMessage "guiConfig".
+In this example we turn off the file open UI controls, the Print menu and export option.
+
+``` JavaScript
+
+        //id of iframe = rxview
+        const rxviewer = document.getElementById("rxview").contentWindow;
+
+        //pass an object of GUI configuration settings here.    
+        rxviewer.postMessage({
+            type: "guiConfig",
+            payload: {
+                mode : {
+                    canFileOpen: false,
+                    canSaveFile: true,
+                    canGetFileInfo: true,
+                    canPrint: false,
+                    canExport: false,
+                    canAnnotate: true,
+                    canCompare: true,
+                    canSignature: true,
+                    canConsolidate: true,
+                }
+              
+            }
+        }, "*");
+
+```
+
+### The IGuiConfig interface
+
+You can pass any of the values listed below in the object sent using the guiConfig postMessage.
+
+
+``` TypeScript
+
+export interface IGuiConfig {
+    canAnnotate?: boolean;
+    canConsolidate?: boolean;
+    canSignature?: boolean;
+    disableImages?: boolean;
+    disableSymbol?: boolean;
+    disableLinks?: boolean;
+    disableSignature?: boolean;    
+    canFileOpen?: boolean;
+    canCompare?: boolean;
+    canPrint?: boolean;
+    canExport?: boolean;
+    canSaveFile?: boolean;
+    canGetFileInfo?: boolean;
+    disableSideNavMenu?: boolean;
+    disableTopNavMenu?: boolean;
+    disableBurgerMenuCompare?: boolean;
+    disableViewPages?: boolean;
+    disableViewAnnotations?: boolean;
+    disableViewUserLayers?: boolean;
+    disableViewVectorLayers?: boolean;
+    disableView3DParts?: boolean;
+    disableMarkupTextButton?: boolean;
+    disableMarkupCalloutButton?: boolean;
+    disableMarkupStampButton?: boolean;
+    disableMarkupPaintButton?: boolean;
+    disableMarkupShapeButton?: boolean;
+    disableMarkupShapeRectangleButton?: boolean;
+    disableMarkupShapeEllipseButton?: boolean;
+    disableMarkupShapeRoundedRectangleButton?: boolean;
+    disableMarkupShapePolygonButton?: boolean;
+    disableMarkupShapeCloudButton?: boolean;
+    disableMarkupArrowButton?: boolean;
+    disableMarkupMeasureButton?: boolean;
+    disableMarkupCountButton?: boolean;
+    disableMarkupEraseButton?: boolean;
+    disableMarkupNoteButton?: boolean;
+    disableMarkupLockButton?: boolean;
+    disableMarkupUndoRedoButtons?: boolean;
+    disableBottomToolbar?: boolean;
+    disableBirdEyeButton?: boolean;
+    disableReset3DModelButton?: boolean;
+    disable3DSelectButton?: boolean;
+    disable3DSelectMarkupButton?: boolean;
+    disableWalkthroughButton?: boolean;
+    disableHide3DPartsButton?: boolean;
+    disableExplode3DModelButton?: boolean;
+    disableTransparency3DModelButton?: boolean;
+    disableClipping3DModelButton?: boolean;
+    disableCreateViewButton?: boolean;
+    disableMagnifyingGlassButton?: boolean;
+    disableZoomInButton?: boolean;
+    disableZoomOutButton?: boolean;
+    disableFitToWindowButton?: boolean;
+    disableFitWidthButton?: boolean;
+    disableFitHeightButton?: boolean;
+    disableZoomInAreaButton?: boolean;
+    disableRotateButton?: boolean;
+    disableHideMarkupsButton?: boolean;
+    disableSelectTextButton?: boolean;
+    disableSearchTextButton?: boolean;
+    disableSearchAttributesButton?: boolean;
+    disableBackgroundColorButton?: boolean;
+    disableMonochromeButton?: boolean;
+    enableGrayscaleButton?: boolean;
+    /*  */
+    logoUrl?: string;
+}
+
+   
+```
+
+### Static file
+`src\assets\config\UIConfig.js`
+
+The `UIConfig.js` file provides a static configuration for the Viewer, enabling customization of its UI and functionality.
+The parameters, that allow to customize the UI of the viewer are as listed below.
+
+For the ease of the branding in case the need of setting up a customer-tailored version the logo and color palette.
+
+
+```JavaScript
+var UIConfig = (function() {
+
+
+    let ConfigJSON = {
+        "UIConfig" : {
+            
+                "canFileOpen": true,
+                "canSaveFile": true,
+                "canGetFileInfo": true,
+                "canPrint": true,
+                "canExport": true,
+                "canAnnotate": true,
+                "canCompare": true,
+                "canSignature": true,
+                "canConsolidate": true,
+                "convertPDFAnnots" : false,
+                "canLogin" : false,
+                "logoUrl": "/assets/images/logo.svg"
+            
+        },
+        "UIStyles" : [
+            
+                { "name": "accent", "value": "#31BD59" },
+                { "name": "accent-secondary", "value": "#F0F7F9" },
+                { "name": "main", "value": "#333C4E" },
+                { "name": "secondary", "value": "#A4ABAE" },
+                { "name": "light-secondary", "value": "#EDF1F2" },
+                { "name": "background", "value": "#D6DADC" },
+                { "name": "background-light", "value": "#F0F7F9" },
+                { "name": "side-nav-background", "value": "#F0F7F9" },
+                { "name": "side-nav-background-active", "value": "#FFFFFF" },
+                { "name": "background-secondary", "value": "#F5F5F5" },
+                { "name": "side-nav-color", "value": "#A6ADB0" },
+                { "name": "side-nav-color-active", "value": "#31BD59" },
+                { "name": "side-nav-panel-background", "value": "#FFFFFF" },
+                { "name": "top-nav-background", "value": "#FFFFFF" },
+                { "name": "top-nav-color", "value": "#333C4E" },
+                { "name": "top-nav-background-active", "value": "#F0F7F9" },
+                { "name": "top-nav-color-active", "value": "#333C4E" },
+                { "name": "top-nav-border-bottom-color-active", "value": "transparent" },
+                { "name": "toolbar-background", "value": "#FFFFFF" },
+                { "name": "toolbar-color", "value": "#333C4E" },
+                { "name": "toolbar-background-active", "value": "#31BD59" },
+                { "name": "logo-height", "value": "auto" }
+        ]
+    };
+
+
+    return {
+        
+        ConfigJSON : ConfigJSON
+
+    };
+
+
+
+})();
+
+```
+
+---
+
+
+
+### Logo Configuration
+
+The image used as a logo that is presented in the viewer (e.g. in the header of the viewspace) can be set with the help of the below parameter.
+
+`"logoUrl": "/assets/images/logo.svg"`
+
+
+
+---
+
+### Color Palette
+
+The color palette is defined with the help of the values listed below.
+
+
+  - `{ "name": "accent", "value": "#31BD59" }`  
+    A vibrant shade used to highlight important elements or actions within the interface.  
+    <img width="400px" src={img1} />
+
+  - `{ "name": "background", "value": "#D6DADC" }`  
+    The primary color for the background of the interface, providing a neutral base for content.  
+    <img width="400px" src={img2} />
+
+  - `{ "name": "background-light", "value": "#F0F7F9" }`  
+    A lighter shade of background color used for contrast or separation within the interface.  
+    <img width="400px" src={img3} />
+
+  - `{ "name": "side-nav-background", "value": "#F0F7F9" }`  
+    The background color for the side navigation panel, providing visual distinction from other areas of the interface.  
+    <img width="400px" src={img4} />
+
+  - `{ "name": "side-nav-background-active", "value": "#FFFFFF" }`  
+    The background color for the active or selected item in the side navigation panel.  
+    <img width="400px" src={img5} />
+
+  - `{ "name": "side-nav-color", "value": "#A6ADB0" }`  
+    The color of text and icons within the side navigation panel.  
+    <img width="400px" src={img6} />
+
+  - `{ "name": "side-nav-color-active", "value": "#31BD59" }`  
+    The color of text and icons for the active or selected item in the side navigation panel.  
+    <img width="400px" src={img7} />
+
+  - `{ "name": "top-nav-background", "value": "#FFFFFF" },`  
+    The background color for the top navigation bar, providing a clean and unobtrusive header for the interface.  
+    <img width="400px" src={img8} />
+
+  - `{ "name": "top-nav-color", "value": "#333C4E" }`  
+    The color of text or icons within the top navigation bar.  
+    <img width="400px" src={img9} />
+
+  - `{ "name": "toolbar-background", "value": "#FFFFFF" }`  
+    The background color for toolbar elements, such as **buttons** or input fields.  
+    <img width="400px" src={img10} />
+
+  - `{ "name": "toolbar-color", "value": "#333C4E" }`  
+    The color of text and icons within toolbar elements.  
+    <img width="400px" src={img11} />
+
+  - `{ "name": "main", "value": "#333C4E" }`  
+    The primary color for main content areas, providing consistency and coherence throughout the interface. Used for action menus, file upload fonts, etc.  
+    <img width="400px" src={img12} />
+  
+  - `{ "name": "light-secondary", "value": "#EDF1F2" }`  
+    A secondary light shade for additional contrast or separation within the interface.  
+
+  - `{ "name": "secondary", "value": "#A4ABAE" }`  
+    A secondary color used for less prominent elements or accents within the interface.  
+    <img width="400px" src={img13} />
+
+  - `{ "name": "accent-secondary", "value": "#F0F7F9" }`  
+    A secondary accent color used to complement the primary accent color in certain interface elements.  
+    <img width="400px" src={img14} />
+
+
+
+These descriptions provide a better understanding of how each color is utilized within the graphical user interface (GUI) to maintain consistency and convey visual hierarchy.
+
+

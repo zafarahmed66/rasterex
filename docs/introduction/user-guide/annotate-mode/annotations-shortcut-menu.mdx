@@ -1,0 +1,75 @@
+---
+title: Annotations Shortcut Menu
+---
+
+import comment from "./img/annotations-shortcut-menu/comment.png";
+import copy from "./img/annotations-shortcut-menu/copy.png";
+import del from "./img/annotations-shortcut-menu/delete.png";
+import dialog from "./img/annotations-shortcut-menu/dialog.png";
+import edit from "./img/annotations-shortcut-menu/edit.png";
+import info from "./img/annotations-shortcut-menu/info.png";
+import markuplink from "./img/annotations-shortcut-menu/markup-link.png";
+import menu1 from "./img/annotations-shortcut-menu/menu1.png";
+import menu2 from "./img/annotations-shortcut-menu/menu2.png";
+import menu3 from "./img/annotations-shortcut-menu/menu3.png";
+import menu4 from "./img/annotations-shortcut-menu/menu4.png";
+import snap from "./img/annotations-shortcut-menu/snap.png";
+import stampinfo from "./img/annotations-shortcut-menu/stamp-info.png";
+import stampinfo2 from "./img/annotations-shortcut-menu/stamp-info2.png";
+
+<div style={{display: "flex"}}>
+<img width={"150px"} src={menu1} alt="menu1"/>
+<img width={"150px"} src={menu2} alt="menu2"/>
+<img width={"150px"} src={menu3} alt="menu3"/>
+<img width={"150px"} src={menu4} alt="menu4"/>
+</div>
+The annotations shortcut menu provides users with instant access to basic functions for annotation editing and interaction directly adjacent to the selected markup item. This menu is designed to streamline the annotation editing process by presenting commonly used functions near the selected annotation, reducing the need to navigate through multiple menus or interfaces.
+
+By clicking on an annotation, users can quickly access the options available for certain markup types, enhancing efficiency and ease of use within the viewer while providing an overview of available capabilities.
+
+### Available Options in the Shortcut Menu
+The options available in the shortcut menu vary depending on the selected markup type and include:
+
+- **Edit**  
+    <img src={edit} alt="edit" />
+  Allows users to access the menu to modify or edit the properties of the selected markup item.  
+  *Note:* This option is not available for stamp annotations.
+
+- **Delete**  
+    <img src={del} alt="delete" />
+  - Enables users to remove the selected markup item from the document.  
+    <img src={dialog} alt="dialog" />
+
+  - This option is available for all markup types.  
+  - *Note:* Clicking the delete option will trigger the display of a confirmation pop-up.
+
+- **Copy**  
+    <img src={copy} alt="copy" />
+  - Allows users to duplicate the selected markup item, creating a copy that can be placed elsewhere in the document.  
+  - Clicking the icon will copy the markup to the clipboard and show a toast message informing the user that the markup has been copied.  
+    
+    <img src={info} alt="info" />
+  - This option is available for all markup types.  
+  - *Note:* For copying to the local buffer, the viewer must be hosted on a valid domain with a secure (HTTPS) connection. The Clipboard API used for this operation is supported only by browsers on pages served over HTTPS.
+
+- **Comment**  
+    <img src={comment} alt="comment" />
+  Provides users access to add an extra comment to the existing markup.  
+  *Note:* This feature is not implemented due to limited SDK capabilities and pending decisions regarding the commenting module.
+
+- **Markup Link**  
+    <img src={markuplink} alt="markuplink" />
+  Allows users to add, view, edit, or delete the markup link associated with the current annotation.  
+  *Note:* This option is unavailable for measure, draw, note, arrow, count, and erase types of annotations.
+
+- **Stamp Info**  
+    <img src={stampinfo} alt="stampinfo" />
+  Allows users to view details about the selected markup.  
+    <img src={stampinfo2} alt="stampinfo2" />
+  Clicking this icon opens the stamp info modal, which includes details such as the author, GUID, layer ID, page, timestamp, and type.  
+  *Note:* This option is only available for stamp markups. For other types of annotations, the information modal is accessible via the edit menu as described later.
+
+- **Snap**  
+    <img src={snap} alt="snap" />
+  Toggles the snap feature, allowing users to define whether the markup should snap to parts of the drawing or be edited freely without snapping.  
+  *Note:* This option is only available for the arrow type of annotation.

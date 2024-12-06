@@ -1,0 +1,63 @@
+---
+title: Annotate Editing
+---
+
+import annotateediting1 from "./img/annotate-editing/annotate-editing1.png";
+import annotateediting2 from "./img/annotate-editing/annotate-editing2.png";
+import annotateediting3 from "./img/annotate-editing/annotate-editing3.png";
+import annotateediting4 from "./img/annotate-editing/annotate-editing4.png";
+import annotateediting5 from "./img/annotate-editing/annotate-editing5.png";
+import annotateediting6 from "./img/annotate-editing/annotate-editing6.png";
+import annotateediting7 from "./img/annotate-editing/annotate-editing7.png";
+import annotateediting8 from "./img/annotate-editing/annotate-editing8.png";
+
+The annotation editing menu offers a range of functionalities tailored to the specific type of annotation selected by the user, providing options that vary depending on the annotation type. This dynamic menu presents users with a customized set of editing tools and features suited to the characteristics and requirements of each annotation type.
+
+Detailed descriptions of specific options available in the annotation editing menu are provided in separate subchapters dedicated to each annotation type below.  
+In addition to using the modal with the tools, users can also click on the annotation on the canvas to edit the markup’s size and location.
+
+### Editing Markups
+<!--<img src={annotateediting1} alt="annotateediting1" />-->
+All annotation types, except for the count tool and note, will be framed with points at each corner or the end of the markup. Text, shapes, and stamp annotations also contain a pivotal point in the middle, slightly above the annotation.  
+
+#### Pivotal Point
+The pivotal point is used to edit the rotation angle of the annotation.  
+- Users can click on it and drag the mouse to adjust the angle of the markup.
+
+#### Resizing Markups
+The points framing the annotation are used to increase or decrease the markup’s size.  
+- Users can click and hold any of the corner points and drag the mouse to make the markup larger or smaller.
+
+### Specific Annotation Types
+
+- **Callout Annotation**  
+<img src={annotateediting2} alt="annotateediting2" />
+
+  Unlike other annotations, callouts do not have a pivotal point for rotation. Instead, an extra point at the end of the arrow allows users to modify the pointer’s position by dragging it.
+- **Arrow or Line Measure Markup**  
+  <div style={{display: "flex"}}>
+    <img src={annotateediting3} alt="annotateediting3" />
+    <img src={annotateediting4} alt="annotateediting4" />
+    </div>
+  Users will see two points at each end of the line.  
+  - Dragging these points lets users edit the position and length of the markup.
+
+- **Area Measurement, Path Measurement, or Polyline Drawing**  
+  <div style={{display: "flex"}}>
+    <img style={{width: "200px", height: "100px", objectFit: "contain"}}  src={annotateediting5} alt="annotateediting5" />
+    <img style={{width: "200px", height: "100px", objectFit: "contain"}} src={annotateediting6} alt="annotateediting6" />
+    <img style={{width: "200px", height: "100px", objectFit: "contain"}} src={annotateediting7} alt="annotateediting7" />
+    </div>
+  These types display start, end, and breaking points of the lines.  
+  - Users can click on each point and drag it to adjust the position, modifying the shape's overall form.
+
+- **Count Annotation**  
+    <img src={annotateediting8} alt="annotateediting8" />
+
+  When a count annotation is clicked, users can drag each specific part of the count to adjust its position.
+
+### Relocating Markups
+For all other existing annotation types (except the count tool), users can use drag-and-drop to relocate the markup on the canvas.
+
+### Note Annotation  
+Note annotations can be moved, but resizing is not currently available.

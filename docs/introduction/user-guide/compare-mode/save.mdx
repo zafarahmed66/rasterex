@@ -1,0 +1,60 @@
+---
+title: Save Comparison
+---
+
+import save1 from "./img/save/save1.png";
+import save2 from "./img/save/save2.png";
+import save3 from "./img/save/save3.png";
+import save4 from "./img/save/save4.png";
+import save5 from "./img/save/save5.png";
+
+
+Once the **first markup** is added to the document, the ability to **edit** or **align** the comparison is disabled. This is to prevent markups from being lost or misaligned relative to their original positions. Consequently, the **"Edit"** button is replaced by the **"Save"** button.
+
+<img src={save1} alt="save1" />
+
+---
+
+#### Save Options in the Standalone Viewer
+
+When a user clicks the **Save** button, the following options are available:
+
+1. **Save**:  
+   - Saves the generated comparison file, including the markups, to the RX server using the `WebClientSaveMarkup` method from `RxCSISAPI.dll`.
+
+2. **Export PDF**:  
+    <img src={save2} alt="save2" />
+
+   - Saves the comparison file and opens a PDF version in a new tab.  
+   - The PDF can be downloaded to the local machine, leveraging the same `WebClientSaveMarkup` method.
+
+3. **Save and Export**:  
+    <img src={save3} alt="save3" />
+
+   - Combines both **Save** and **Export PDF** functions.  
+   - Saves the changes to the server and simultaneously opens the PDF with the generated markups in a new tab for download.
+
+---
+
+#### Unsaved Changes Alert Modal  
+<img src={save4} alt="save4" />
+
+If a user attempts to close the comparison without saving, a modal window appears with the following options:
+
+1. **Cancel/Close Icon**:  
+   - Cancels the closing action and dismisses the modal, allowing users to continue working without saving.
+
+2. **Discard**:  
+   - Discards all changes made since the last save and closes the comparison without saving any markups.
+
+3. **Save**:  
+    <img src={save5} alt="save5" />
+
+   - Saves the comparison file, including all markups, using the previously described save methods.
+
+---
+
+#### Notes on Saving Behavior
+
+- This saving process is specific to the **standalone viewer**.  
+- When the viewer is launched within the **ExSys** environment, the saving workflow may differ, as detailed in a separate chapter of the document.

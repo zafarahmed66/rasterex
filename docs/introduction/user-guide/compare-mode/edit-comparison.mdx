@@ -1,0 +1,45 @@
+---
+title: Edit Comparison
+---
+
+import editcomparison from "./img/edit-comparison/edit-comparison.png";
+import editcomparison2 from "./img/edit-comparison/edit-comparison2.png";
+import editcomparison3 from "./img/edit-comparison/edit-comparison3.png";
+
+
+<img src={editcomparison} alt={"editcomparison"} />
+
+Editing the comparison is accessible via the **floating button** located in the bottom left-hand corner of the main viewer. This allows users to modify certain aspects of the comparison, such as file order and color settings.
+
+---
+
+#### Accessing Comparison Editing  
+1. **Floating Button**:  
+   - Click the arrow on the floating button to reveal available options.  
+    <img src={editcomparison2} alt={"editcomparison2"} />
+
+   - Select the **Edit** option from the menu.
+
+2. **Edit Pop-up**:  
+   - Once selected, a pop-up appears, allowing users to modify the comparison’s basic properties (e.g., order and colors).  
+   - Unlike the create compare flow, file selection changes are not possible in this mode.  
+   - Detailed information on this modal is outlined in the "Create Compare" subchapter.
+
+---
+
+#### Modifying the Comparison  
+- **Apply Button**:  
+    <img src={editcomparison3} alt={"editcomparison3"} />
+
+  - After making changes, click the **Apply** button to regenerate the comparison.  
+  - The UI will display a **progress bar** while the updated comparison is being generated.  
+  - Once the server returns the updated file, it will be displayed in the viewer.
+
+- **Cancel Button**:  
+  - To dismiss changes without applying them, click the **Cancel** button.
+
+---
+
+#### Markup Layer Modifications  
+- If any changes are made to the markup layer, the editing option will be disabled and replaced with **saving options**.
+

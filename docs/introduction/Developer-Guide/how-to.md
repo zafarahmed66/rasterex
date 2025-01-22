@@ -3,40 +3,8 @@ title: How To
 ---
 
 ## Basic Operations
-### Open File on Startup
-To open a file when starting the viewer, use the RxCore.openFile() method, passing the file URL or the server-side path as the parameter:
+In this How to section
 
-```typescript
-RxCore.openFile(fileurl);
-```
-
-- `fileurl`: String containing the URL or path of the file to open.
-
----
-
-### Set User
-To set a user for authentication or markup association, use the RxCore.setAuthorization() method before initializing the viewer:
-
-```typescript
-RxCore.setAuthorization(type, token);
-```
-
-- `type`: Authentication method as a string (e.g., "Basic").
-- `token`: Base64-encoded token.
-
---- 
-
-### Initialize Viewer
-To initialize the RxView360 viewer with the correct layout settings:
-
-```typescript
-RxCore.initialize(layout, divid, class);
-```
-- `layout`: Object containing offsetWidth and offsetHeight properties.
-- `divid`: ID of the div where the viewer will be attached (optional).
-- `class`: CSS class to style the viewer (optional).
-
----
 
 ## Compare/Overlay
 ### Server-Side Compare

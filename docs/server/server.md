@@ -110,6 +110,127 @@ In some cases the Handler mapping for the RxbinWeb  application is not set corre
 ## rxconfig.js
 contains an object that hold the main URLs that connect the RxWebClient web page with the server. The installation should set up the correct URLs in this file but if you need to move the server or change the configuration, make sure that the URLs in this file is updated to reflect these changes.
 
+
+```JavaScript
+
+var RxConfig = (function() {
+    'use strict';
+
+    /* server connect */
+    var gui360URL = "rxweb/";
+
+    var baseURL = "http://viewserver.rasterex.com/";
+
+    var baseURLBin = baseURL + "RxBinWeb/";
+    var baseURLWeb = baseURL + "rxweb/";
+    var baseURLBinWeb = baseURL + "RxBinweb";
+
+    var xmlurl = baseURLBin + "RxCSISAPI.dll?WebClientPublish";
+    var xmlurldirect = baseURLBin + "RxCSISAPI.dll";
+    var xmlurlmarkup = baseURLBin + "RxCSISAPI.dll?WebClientPublish";
+    var opensessionurl = baseURLBin + "RxCSISAPI.dll?OpenSession";
+    var openUsessionurl = baseURLBin + "RxCSISAPI.dll?OpenSessionUser";
+    var openUsessionurlEx = baseURLBin + "RxCSISAPI.dll?OpenSessionUserEx";
+    var openMsessionurl = baseURLBin + "RxCSISAPI.dll?OpenMarkupSession";
+    var closesessionurl = baseURLBin + "RxCSISAPI.dll?CloseSession";
+    var xmlurlmarkupsave = baseURLBin + "RxCSISAPI.dll?WebClientSaveMarkup";
+
+    var WebClientPDFUpload = baseURLBin + "RxCSISAPI.dll?WebClientPDFUpload";
+
+    var markupsave = baseURLBin + "RxCSISAPI.dll?MarkupSave";
+    var savefile = baseURLBin + "RxCSISAPI.dll?WebClientSaveFile";
+
+    var FileuploadURL = baseURLBin + "RxCSISAPI.dll?WebClientFileUpload";
+    var PDFExportURL = baseURLBin + "RxCSISAPI.dll?WebClientSaveAs";
+    var PDFExportPageURL = baseURLBin + "RxCSISAPI.dll?WebClientSavePageAs"; 
+
+    var PDFPrintPrepare = baseURLBin + "RxCSISAPI.dll?PDFPrintPrepare";
+    var PDFPrintCreate = baseURLBin + "RxCSISAPI.dll?PDFPrintCreate";
+
+
+    var CanvasSaveUrl = baseURLBin + "RxCSISAPI.dll?WebClientSaveImageAs";
+    var UploadServerfolder = "C:\\Rasterex\\Upload\\";
+    var UploadServerfolderd = "C:\\\\Rasterex\\\\Upload\\\\";
+    var xmlurlrel = baseURLBinWeb;
+    var xmlurlrelmarkup = baseURLBinWeb;
+    var uploadfolderURL = baseURLWeb + "Upload/";
+    var htmlviewerurl = baseURLWeb + "default.htm";
+    var splashscreen = baseURL + "rxweb/welcome.jpg";
+    var noteImgSrc = baseURL + "rxweb/images/note.png";
+    var PDFcmap = baseURLWeb + "pdfjs/web/cmaps/";
+
+    var baseFileURL = "C:\\\\Rasterex\\\\Upload\\\\";
+
+    var PDFLib = baseURLWeb + "pdfjs/build/pdf.js";
+    var PDFWorker = baseURLWeb + "pdfjs/build/pdf.worker.js";
+
+
+    /* config */
+
+    
+    var configurationLocation = baseURLBin + "RxCSISAPI.dll?WebClientGetConfig";
+    var bGetconfig = true;
+    var bUseID = false;
+    var noCachFolder = false;
+
+    var serverComparefiles = baseURLBin + "RxCSISAPI.dll?CommandJSON";
+
+    var serverJSONcommand = baseURLBin + "RxCSISAPI.dll?CommandJSON";
+
+    var putSignature = baseURLBin + "RxCSISAPI.dll?WebClientPutSignature";
+    var getSignature = baseURLBin + "RxCSISAPI.dll?WebClientGetSignature";
+
+    var putInitial = baseURLBin + "RxCSISAPI.dll?WebClientPutInitial";
+    var getInitial = baseURLBin + "RxCSISAPI.dll?WebClientGetInitial";
+
+    return {
+        xmlurl: xmlurl,
+	      xmlurldirect : xmlurldirect,
+        xmlurlmarkup : xmlurlmarkup,
+        opensessionurl: opensessionurl,
+        openUsessionurl : openUsessionurl,
+        openUsessionurlEx : openUsessionurlEx,
+        openMsessionurl: openMsessionurl,
+        closesessionurl: closesessionurl,
+        xmlurlmarkupsave: xmlurlmarkupsave,
+        markupsave : markupsave,
+        savefile : savefile,
+        FileuploadURL: FileuploadURL,
+        PDFExportURL: PDFExportURL,
+        PDFExportPageURL : PDFExportPageURL,
+        PDFPrintPrepare : PDFPrintPrepare,
+        PDFPrintCreate : PDFPrintCreate,
+        CanvasSaveUrl: CanvasSaveUrl,
+        UploadServerfolder: UploadServerfolder,
+        UploadServerfolderd: UploadServerfolderd,
+        WebClientPDFUpload : WebClientPDFUpload,
+        baseFileURL: baseFileURL,
+        baseURLWeb : baseURLWeb,
+        xmlurlrel: xmlurlrel,
+        xmlurlrelmarkup : xmlurlrelmarkup,
+        uploadfolderURL: uploadfolderURL,
+        htmlviewerurl: htmlviewerurl,
+        splashscreen: splashscreen,
+        noteImgSrc : noteImgSrc,
+        PDFcmap : PDFcmap,
+        PDFLib : PDFLib,
+        PDFWorker : PDFWorker,
+        bGetconfig: bGetconfig,
+        bUseID : bUseID,
+        noCachFolder : noCachFolder,
+        configurationLocation: configurationLocation,
+        serverComparefiles: serverComparefiles,
+        serverJSONcommand : serverJSONcommand,
+        putSignature : putSignature,
+        getSignature : getSignature,
+        putInitial : putInitial,
+        getInitial : getInitial,
+    };
+
+})();
+
+```
+
 The variables are.
 
 - `xmlurl` – Hold the URL to the main interface of the server ISAPI.
@@ -127,6 +248,9 @@ The variables are.
 - `xmlurlrel` - URL to the folder where the ISAPI reside.
 - `htmlviewerurl` – The URL of the RxWebClient html page.
 - `splashscreen` - The URL of the RxWebClient startup graphics.
+
+
+## defaultconfig.xml
 
 Also included in this file is a reference to a configuration source and a Boolean variable that determine if a configuration file should be used or not.
 

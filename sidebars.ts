@@ -51,6 +51,16 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: "category",
+          label: "Developer Guide",
+          items : [
+            //"introduction/Developer-Guide/how-to",
+            "introduction/Developer-Guide/Initialize-Viewer",
+            "introduction/Developer-Guide/openFile",
+            "introduction/Developer-Guide/SetUser",
+          ],
+        },
+        {
+          type: "category",
           label: "Rasterex Web Viewer",
           items :[
             "introduction/webviewer",
@@ -317,6 +327,7 @@ const sidebars: SidebarsConfig = {
                     "introduction/page/methods/redrawPage",
                     "introduction/page/methods/replacefloorplanfromPage",
                     "introduction/page/methods/rotatePage",
+                    "introduction/page/methods/rotateThumbnail",
                     "introduction/page/methods/setLargePDFpageLimit",
                     "introduction/page/methods/setnavScaleOffsetPage",
                     "introduction/page/methods/setpageAs3DNavigator",
@@ -820,7 +831,10 @@ const sidebars: SidebarsConfig = {
                       type: "category",
                       label: "Methods",
                       items: [
+                        "introduction/pro-version/markup-annotations/methods/convertPDFAnnots",
                         "introduction/pro-version/markup-annotations/methods/markupButtonFromMatch",
+                        "introduction/pro-version/markup-annotations/methods/usePDFAnnotProxy",
+
                       ],
                     },
                   ],
@@ -851,6 +865,7 @@ const sidebars: SidebarsConfig = {
                         "introduction/pro-version/pdf/methods/setPDFBookmarks",
                         "introduction/pro-version/pdf/methods/setPDFLayers",
                         "introduction/pro-version/pdf/methods/setThumbnailFoxit",
+                        "introduction/pro-version/pdf/methods/uploadPDFCustom"
                       ],
                     },
                     {
@@ -930,9 +945,7 @@ const sidebars: SidebarsConfig = {
 
           ],
         },
-           
-        
-        "introduction/how-to"
+                
       ],
     },
     "server/server",

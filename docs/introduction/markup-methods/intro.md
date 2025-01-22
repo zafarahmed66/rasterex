@@ -110,6 +110,21 @@ Gets a string describing the markup type.
 
 ---
 
+### getrotatedPoint
+
+Use to get screen coordinates transformed from a point on a rotated page.
+
+- **Syntax**: `Markup.getrotatedPoint(x, y)`
+- **Parameters**:
+  - `x`: Horizontal component of original point
+  - `y`: Vertical component of original point
+- **Returns**: Object with properties:
+  - `object {x : x, y : y}`:  Point in screen coordinate system
+
+
+---
+
+
 ### getselected
 
 Checks if the markup is currently selected.

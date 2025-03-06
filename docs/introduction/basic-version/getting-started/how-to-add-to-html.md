@@ -53,6 +53,7 @@ The following script files need to be referenced for the viewer to work.
     <script type="text/javascript" src="../assets/scripts/detector.js"></script>
     <script type="text/javascript" src="../assets/scripts/GLTFLoader.js"></script>
     <script src="../assets/vendors/pdfjs/build/pdf.js"></script>
+    <script type="text/javascript" src="../assets/scripts/jquery-2.1.0.min.js"></script>
 
     
     <script type="text/javascript" charset="utf-8">
@@ -73,7 +74,6 @@ The following script files need to be referenced for the viewer to work.
             RxCore.initialize(canvdim);
 
             RxCore.GUI_Ready.connect(function () {
-                addFoxitdocBarebone();
                 bguireadycalled = true;
 
                 openInitFile(drawing);
@@ -90,10 +90,10 @@ The following script files need to be referenced for the viewer to work.
 
         function openInitFile(initialDoc) {
 
-            if (bguireadycalled && bfoxitreadycalled) {
+            if (bguireadycalled) {
                 if (binitfileopened == false) {
                     binitfileopened = true;
-                    RXCore.openFile(initialDoc);
+                    RxCore.openFile(initialDoc);
                 }
             }
         }

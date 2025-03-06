@@ -11,6 +11,7 @@ RxCore.setPDFBookmarks(bookmarks)
 
 - `bookmarks`: **`Array<object>`** — Array of PDF bookmark objects.
 
+
 ### Returns
 
 - **NA** — This method does not return a value.

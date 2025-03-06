@@ -16,6 +16,17 @@ const sidebars: SidebarsConfig = {
 
   // But you can create a sidebar manually
 
+  /*tutorialSidebar_2: [
+    {
+    type: "category",
+    label: "RxSDK for Windows",
+    items: [
+      "RxSDK_for_Windows\RxSDK_for_Windows_release22",
+    ],
+    },
+  ],*/
+
+  
   tutorialSidebar: [
     {
       type: "category",
@@ -248,26 +259,21 @@ const sidebars: SidebarsConfig = {
                     "introduction/document/methods/endMarkupTextSearch",
                     "introduction/document/methods/endTextSearch",
                     "introduction/document/methods/fileInfoDialog",
-                    "introduction/document/methods/findMarkUp",
                     "introduction/document/methods/getAllPageDimensions",
                     "introduction/document/methods/getCacheURL",
                     "introduction/document/methods/getcurPage",
                     "introduction/document/methods/getDocFileName",
                     "introduction/document/methods/getdocInfo",
                     "introduction/document/methods/getDocRect",
-                    "introduction/document/methods/getMarkupSearchPadding",
                     "introduction/document/methods/getOriginalPath",
-                    "introduction/document/methods/markupTextSearch",
-                    "introduction/document/methods/openMarkup",
                     "introduction/document/methods/print",
                     "introduction/document/methods/printEx",
                     "introduction/document/methods/printSizeEx",
                     "introduction/document/methods/select3D",
-                    "introduction/document/methods/select3DMarkup",
-                    "introduction/document/methods/setMarkupSearchPadding",
                     "introduction/document/methods/textSearch",
                     "introduction/document/methods/textSelect",
                     "introduction/document/methods/setSingleDocument",
+                    "introduction/document/methods/updateScaleList"
                   ],
                 },
                 {
@@ -331,6 +337,7 @@ const sidebars: SidebarsConfig = {
                     "introduction/page/methods/setLargePDFpageLimit",
                     "introduction/page/methods/setnavScaleOffsetPage",
                     "introduction/page/methods/setpageAs3DNavigator",
+                    "introduction/page/methods/setThumbnailSize",
                     "introduction/page/methods/switchPages",
                     "introduction/page/methods/zoomPageUpdate",
                   ],
@@ -391,6 +398,7 @@ const sidebars: SidebarsConfig = {
                     "introduction/markup-annotations/methods/deleteMarkUp",
                     "introduction/markup-annotations/methods/deleteMarkupbyGUID",
                     "introduction/markup-annotations/methods/deletePoint",
+                    "introduction/document/methods/findMarkUp",
                     "introduction/markup-annotations/methods/getAllSelectedMarkup",
                     "introduction/markup-annotations/methods/getCurrentColor",
                     "introduction/markup-annotations/methods/getDisplayName",
@@ -401,6 +409,7 @@ const sidebars: SidebarsConfig = {
                     "introduction/markup-annotations/methods/getmarkupGUIDs",
                     "introduction/markup-annotations/methods/getMarkupLayers",
                     "introduction/markup-annotations/methods/getmarkupobjByGUID",
+                    "introduction/document/methods/getMarkupSearchPadding",
                     "introduction/markup-annotations/methods/getMarkupXMLByGUID",
                     "introduction/markup-annotations/methods/getMarkupXMLData",
                     "introduction/markup-annotations/methods/getMarkupXMLSelected",
@@ -450,14 +459,17 @@ const sidebars: SidebarsConfig = {
                     "introduction/markup-annotations/methods/markUpSubType",
                     "introduction/markup-annotations/methods/markUpTextRect",
                     "introduction/markup-annotations/methods/markUpTextRectArrow",
+                    "introduction/document/methods/markupTextSearch",
                     "introduction/markup-annotations/methods/markUpUndo",
                     "introduction/markup-annotations/methods/markUpUserDialog",
                     "introduction/markup-annotations/methods/modifyMarkup",
                     "introduction/markup-annotations/methods/moveLabelEnable",
                     "introduction/markup-annotations/methods/nextMarkup",
                     "introduction/markup-annotations/methods/noteFocus",
+                    "introduction/document/methods/openMarkup",
                     "introduction/markup-annotations/methods/pasteMarkUp",
                     "introduction/markup-annotations/methods/restoreMouseInput",
+                    "introduction/document/methods/select3DMarkup",
                     "introduction/markup-annotations/methods/selectMarkupbyGUID",
                     "introduction/markup-annotations/methods/selectMarkupbyGUIDs",
                     "introduction/markup-annotations/methods/selectMarkUpByIndex",
@@ -487,6 +499,7 @@ const sidebars: SidebarsConfig = {
                     "introduction/markup-annotations/methods/setLineWidthUnits",
                     "introduction/markup-annotations/methods/setMarkupLayer",
                     "introduction/markup-annotations/methods/setmarkupRxGUID",
+                    "introduction/document/methods/setMarkupSearchPadding",
                     "introduction/markup-annotations/methods/setMarkupXMLData",
                     "introduction/markup-annotations/methods/setRxSpaceColor",
                     "introduction/markup-annotations/methods/setSpaceID",
@@ -654,6 +667,7 @@ const sidebars: SidebarsConfig = {
                   items: [
                     "introduction/cad/methods/addFill",
                     "introduction/cad/methods/addHoverforBlock",
+                    "introduction/cad/methods/appendCustomBlockAttribute",
                     "introduction/cad/methods/attributeMask",
                     "introduction/cad/methods/backgroundColor",
                     "introduction/cad/methods/backgroundCustomColor",
@@ -669,6 +683,7 @@ const sidebars: SidebarsConfig = {
                     "introduction/cad/methods/findBlockByAttr",
                     "introduction/cad/methods/get2DVectorBlocks",
                     "introduction/cad/methods/get2DVectorfilterAttributes",
+                    "introduction/cad/methods/get2DVectorPentable",
                     "introduction/cad/methods/getBlockAttributes",
                     "introduction/cad/methods/getHatches",
                     "introduction/cad/methods/keepVectorColor",
@@ -682,13 +697,14 @@ const sidebars: SidebarsConfig = {
                     "introduction/cad/methods/setBlockFill",
                     "introduction/cad/methods/setHatchDescription",
                     "introduction/cad/methods/setMonoChrome",
+                    "introduction/cad/methods/setpentablePen",
                     "introduction/cad/methods/setVectorBlockArea",
                     "introduction/cad/methods/toggleBackground",
+                    "introduction/cad/methods/usePentableUpload",
                     "introduction/cad/methods/vectorBlocksAll",
                     "introduction/cad/methods/vectorLayersAll",
                     "introduction/cad/methods/viewMode",
-                    "introduction/cad/methods/zoomToBlock",
-                    "introduction/cad/methods/appendCustomBlockAttribute",
+                    "introduction/cad/methods/zoomToBlock"
                   ],
                 },
     
@@ -700,6 +716,7 @@ const sidebars: SidebarsConfig = {
                     "introduction/cad/callbacks/GUI_2DBlockInfo",
                     "introduction/cad/callbacks/GUI_2DBlockInfoPos",
                     "introduction/cad/callbacks/GUI_HatchChange",
+                    "introduction/cad/callbacks/GUI_penTableJSON",
                     "introduction/cad/callbacks/GUI_VectorBlocksLoaded",
                     "introduction/cad/callbacks/GUI_VectorLayers",
                   ],
@@ -730,6 +747,7 @@ const sidebars: SidebarsConfig = {
                   label: "Methods",
                   items: [
                     "introduction/compare/methods/alignCompare",
+                    "introduction/compare/methods/alignCompareEx",
                     "introduction/compare/methods/compare",
                     "introduction/compare/methods/compareDialog",
                     "introduction/compare/methods/compareFiles",
@@ -750,6 +768,7 @@ const sidebars: SidebarsConfig = {
                   items: [
                     "introduction/compare/callbacks/GUI_CompareAlign",
                     "introduction/compare/callbacks/GUI_CompareDiag",
+                    "introduction/compare/callbacks/GUI_compareLoadComplete",
                     "introduction/compare/callbacks/GUI_CompareMeasure",
                   ],
                 },
@@ -851,10 +870,17 @@ const sidebars: SidebarsConfig = {
                         "introduction/pro-version/pdf/methods/bringIframeToFront",
                         "introduction/pro-version/pdf/methods/changePDFLayer",
                         "introduction/pro-version/pdf/methods/checkLargePDF",
+                        "introduction/pro-version/pdf/methods/convertPDFAnnots",
                         "introduction/pro-version/pdf/methods/createFoxitDoc",
                         "introduction/pro-version/pdf/methods/forcepagesState",
+                        "introduction/pro-version/pdf/methods/foxitAnnotlist",
+                        "introduction/pro-version/pdf/methods/foxitcalibratepagemarkup",
                         "introduction/pro-version/pdf/methods/foxitcalibratepagemarkupEx",
+                        "introduction/pro-version/pdf/methods/foxitcalibratepagePosX",
+                        "introduction/pro-version/pdf/methods/foxitcalibratepagePosY",
                         "introduction/pro-version/pdf/methods/foxitForceRedraw",
+                        "introduction/pro-version/pdf/methods/foxitonScrollupdate",
+                        "introduction/pro-version/pdf/methods/getCanvasSize",
                         "introduction/pro-version/pdf/methods/getdivcontainer",
                         "introduction/pro-version/pdf/methods/getFoxitlframeID",
                         "introduction/pro-version/pdf/methods/getfoxitThumbnail",
@@ -862,10 +888,13 @@ const sidebars: SidebarsConfig = {
                         "introduction/pro-version/pdf/methods/importFDF",
                         "introduction/pro-version/pdf/methods/navigateBookmark",
                         "introduction/pro-version/pdf/methods/scrollBarCheck",
+                        "introduction/pro-version/pdf/methods/setfoxitPageSize",
                         "introduction/pro-version/pdf/methods/setPDFBookmarks",
                         "introduction/pro-version/pdf/methods/setPDFLayers",
                         "introduction/pro-version/pdf/methods/setThumbnailFoxit",
-                        "introduction/pro-version/pdf/methods/uploadPDFCustom"
+                        "introduction/pro-version/pdf/methods/uploadPDFCustom",
+                        "introduction/pro-version/pdf/methods/usePDFAnnotProxy"
+                        
                       ],
                     },
                     {
@@ -950,6 +979,17 @@ const sidebars: SidebarsConfig = {
     },
     "server/server",
   ],
+
+  rxSDKSidebar: [
+    {
+      type: "category",
+      label: "RxSDK for Windows",
+      items: [
+        "RxSDK_for_Windows/RxSDK_for_Windows_release22",
+      ],
+    },
+  ],
+
 };
 
 export default sidebars;

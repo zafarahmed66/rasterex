@@ -31,7 +31,6 @@ In this example we turn off the file open UI controls, the Print menu and export
         rxviewer.postMessage({
             type: "guiConfig",
             payload: {
-                mode : {
                     canFileOpen: false,
                     canSaveFile: true,
                     canGetFileInfo: true,
@@ -41,12 +40,75 @@ In this example we turn off the file open UI controls, the Print menu and export
                     canCompare: true,
                     canSignature: true,
                     canConsolidate: true,
-                }
-              
             }
         }, "*");
 
 ```
+### Controlling the UI in an Iframe
+
+``` JavaScript
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Rasterex Viewer</title>
+        <!-- <base href="./"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+        <script type="text/javascript" src="../assets/scripts/jquery-2.1.0.min.js"></script>
+
+        <style>
+            body{
+                margin: 0; /* Remove default margin */
+            }
+            iframe{      
+                display: block;  /* iframes are inline by default */   
+                height: 100vh;  /* Set height to 100% of the viewport height */   
+                width: 100vw;  /* Set width to 100% of the viewport width */     
+                border: none; /* Remove default border */
+                background: lightyellow; /* Just for styling */
+            }
+        </style>
+
+    </head>
+    <body>
+        <iframe src="index.html" id="rxview"></iframe>
+
+        <script>
+
+            const rxviewer = document.getElementById("rxview").contentWindow;
+
+        
+              $().ready(()=>{
+                
+                    $("#rxview").on("load", function() {
+
+                        rxviewer.postMessage({
+                            type: "guiConfig",
+                            payload: {
+                                    canFileOpen: false,
+                                    canSaveFile: true,
+                                    canGetFileInfo: true,
+                                    canPrint: false,
+                                    canExport: false,
+                                    canAnnotate: true,
+                                    canCompare: true,
+                                    canSignature: true,
+                                    canConsolidate: true,
+                            }
+                        }, "*");
+                
+                    });
+              })
+          
+        </script>
+    </body>
+</html>
+
+
+```
+
 
 ### The IGuiConfig interface
 

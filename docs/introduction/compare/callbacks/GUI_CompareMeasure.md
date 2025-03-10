@@ -5,3 +5,9 @@ Callback event that returns the result of the `compareMeasure` method.
 - **angle**: Angle in radians of the two points of the distance measured.
 - **offset**: Point object with x and y coordinates of the first point.
 - **pagewidth**: Width of the measured page in pixels.
+
+
+```typescript
+const measureobj = {dist: distance, angle : angle, offset : offset, pwidth : pagewidth, scaleinfo : scaleinfo};
+
+```

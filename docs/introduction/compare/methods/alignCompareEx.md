@@ -1,4 +1,8 @@
-Used to align two documents in an overlay comparison. This method takes an array of align objects returned by the `GUI_CompareMeasure` callback.
+Used to align two documents in an overlay comparison. First time called the alignarray parameter should be empty.
+An array of align values are returned by the `GUI_CompareMeasure` callback.
+Second time this is called for the foreground file the returned value from the `GUI_CompareMeasure` callback should be passed.
+
+See [GUI_CompareMeasure](../callbacks/GUI_CompareMeasure) for details on align array structure.
 
 
 Fileindex is returned by the `GUI_compareLoadComplete` callback.
@@ -8,18 +12,12 @@ Fileindex is returned by the `GUI_compareLoadComplete` callback.
 ### Syntax
 
 ```typescript
-RxCore.alignCompareEx(array, fileindex)
+RxCore.alignCompareEx(alignarray, fileindex)
 ```
 
 ### Parameters
 
-- `array`: **Array** — An array of align objects. Each align object has the following structure:
-  - `dist`: **number** — Distance for alignment.
-  - `angle`: **number** — Angle for alignment.
-  - `offset`: **object** — Offset for alignment, defined as:
-    - `x`: **number** — X offset.
-    - `y`: **number** — Y offset.
-  - `pwidth`: **number** — Page width.
+- `alignarray`: **Array** — An array of align objects or empty array.
 - `fileindex`: **number** — A number identifying the open file that the alignment is to be applied to:
 ### Returns
 

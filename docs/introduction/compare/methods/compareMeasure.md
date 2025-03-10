@@ -1,5 +1,10 @@
 Starts the compare alignment function to get the scale and offset for compare/overlay on a file, even if the file is not currently part of a compare/overlay.
 
+An array of align values are returned by the `GUI_CompareMeasure` callback.
+
+
+See [GUI_CompareMeasure](../callbacks/GUI_CompareMeasure) for details on align array structure.
+
 ### Syntax
 
 ```typescript

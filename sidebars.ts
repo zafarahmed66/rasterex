@@ -1028,6 +1028,35 @@ const sidebars: SidebarsConfig = {
             "RxSDK_for_Windows/RxPDF/appendixes",
           ],
         },
+        {
+          type: "category",
+          label: "RxPrint",
+          items: [
+            "RxSDK_for_Windows/RxPrint/generalInformation",
+            "RxSDK_for_Windows/RxPrint/theRxPrinterObject",
+            "RxSDK_for_Windows/RxPrint/theRxPrinter3dObject",
+            "RxSDK_for_Windows/RxPrint/appendixes",
+          ],
+        },
+        {
+          type: "category",
+          label: "RxSymbol",
+          items: [
+            "RxSDK_for_Windows/RxSymbol/generalInformation",
+            "RxSDK_for_Windows/RxSymbol/theRxSymbolsObject",
+            "RxSDK_for_Windows/RxSymbol/appendixes",
+          ],
+        },
+        {
+          type: "category",
+          label: "RxConvert",
+          items: [
+            "RxSDK_for_Windows/RxConvert/generalInformation",
+            "RxSDK_for_Windows/RxConvert/theRxConverterObject",
+            "RxSDK_for_Windows/RxConvert/theRxAcadConverterObject",
+            "RxSDK_for_Windows/RxConvert/appendixes",
+          ],
+        },
       ],
     },
   ],

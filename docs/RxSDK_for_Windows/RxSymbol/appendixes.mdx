@@ -1,0 +1,78 @@
+# Appendixes
+
+import aztec from "./images/aztec.png";
+import code128 from "./images/code-128.png";
+import code93 from "./images/code-93.png";
+import code39 from "./images/code-39.png";
+import dataMatrix from "./images/data-matrix.png";
+import pdf417 from "./images/pdf417.png";
+
+In this section, you will find additional information about the `RxSymbols` object and its usage.
+
+## Appendix A: Barcode Appearances
+
+The `RxSymbols` object can generate many barcode encoding types. Among the supported encodings, you will find well-known standards like PDF417, Aztec, DataMatrix, and QR. Below, you will find a few examples of how the different barcodes look when they are generated with `RxSymbols`:
+
+### Aztec 2D
+
+- **Text**: `Rasterex Software a.s.`
+
+  <img src={aztec} alt="Aztec 2D" width={100} />
+
+### DataMatrix 2D
+
+- **Text**: `Rasterex Software a.s.`
+
+  <img src={dataMatrix} alt="DataMatrix 2D" width={100} />
+
+### PDF417 Encoding
+
+- **Text**: `Rasterex Software a.s.`
+
+  <img src={pdf417} alt="PDF417 Encoding" width={200} />
+
+### Code 128-B Encoding
+
+- **Description**: With both label and the actual encoded text displayed (`IncludeText` enabled).
+
+  <img src={code128} alt="Code 128-B Encoding" width={200} />
+
+### Code 39 Encoding
+
+- **Description**: With both label and the encoded text displayed.
+- **Note**: This standard can only encode uppercase letters.
+
+  <img src={code39} alt="Code 39 Encoding" width={200} />
+
+### Code 93 Encoding
+
+- **Description**: With both label and the encoded text displayed.
+- **Note**: This standard can only encode uppercase letters.
+
+  <img src={code93} alt="Code 93 Encoding" width={200} />
+
+## Appendix B: Return Values
+
+The COM objects expose one or more interfaces each. All methods defined by these interfaces return an `HRESULT` status value to inform the client about the success or failure of the requested operation.
+
+Currently, the RxSDK objects return the following standard `HRESULT` values:
+
+| Name           | Description                                  | Value      |
+| -------------- | -------------------------------------------- | ---------- |
+| S_OK           | Operation successful                         | 0x00000000 |
+| S_FALSE        | Operation successful, but may have been void | 0x00000001 |
+| E_UNEXPECTED   | Unexpected failure                           | 0x8000FFFF |
+| E_NOTIMPL      | Not implemented                              | 0x80004001 |
+| E_OUTOFMEMORY  | Failed to allocate necessary memory          | 0x8007000E |
+| E_INVALIDARG   | One or more arguments are invalid            | 0x80070057 |
+| E_NOINTERFACE  | No such interface supported                  | 0x80004002 |
+| E_POINTER      | Invalid pointer                              | 0x80004003 |
+| E_HANDLE       | Invalid handle                               | 0x80070006 |
+| E_ABORT        | Operation aborted                            | 0x80004004 |
+| E_FAIL         | Unspecified failure                          | 0x80004005 |
+| E_ACCESSDENIED | General access denied error                  | 0x80070005 |
+
+### Notes
+
+- For the RxSDK components, only the `S_OK` value indicates a 100% successful operation.
+- All other return values should be treated as an error condition.

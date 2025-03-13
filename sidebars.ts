@@ -980,6 +980,9 @@ const sidebars: SidebarsConfig = {
       ],
     },
     "server/server",
+  ],
+
+  rxSDKSidebar: [
     {
       type: "category",
       label: "RxSDK for Windows",

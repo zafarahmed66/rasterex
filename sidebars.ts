@@ -26,7 +26,6 @@ const sidebars: SidebarsConfig = {
     },
   ],*/
 
-  
   tutorialSidebar: [
     {
       type: "category",
@@ -36,12 +35,12 @@ const sidebars: SidebarsConfig = {
         {
           type: "category",
           label: "Getting Started ",
-          items :[
+          items: [
             "introduction/installation",
             {
               type: "category",
               label: "Pro version",
-              items : [
+              items: [
                 // "introduction/installation_pro",
                 "introduction/pro-version/getting-started/dependencies",
                 "introduction/pro-version/getting-started/how-to-add-to-html",
@@ -50,20 +49,18 @@ const sidebars: SidebarsConfig = {
             {
               type: "category",
               label: "Basic version",
-              items : [
+              items: [
                 // "introduction/installation_basic",
                 "introduction/basic-version/getting-started/dependencies",
                 "introduction/basic-version/getting-started/how-to-add-to-html",
               ],
             },
-
           ],
-
         },
         {
           type: "category",
           label: "Developer Guide",
-          items : [
+          items: [
             //"introduction/Developer-Guide/how-to",
             "introduction/Developer-Guide/Initialize-Viewer",
             "introduction/Developer-Guide/openFile",
@@ -73,7 +70,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "category",
           label: "Rasterex Web Viewer",
-          items :[
+          items: [
             "introduction/webviewer",
             {
               type: "category",
@@ -146,14 +143,12 @@ const sidebars: SidebarsConfig = {
                 // },
                 "introduction/user-guide/signing-module/other-menus",
               ],
-            },            
+            },
             "introduction/iframe",
             "introduction/controllingUI",
           ],
-  
         },
 
-        
         /* {
           type: "category",
           label: "How to",
@@ -162,11 +157,11 @@ const sidebars: SidebarsConfig = {
             "introduction/rasterex_web_viewer",
           ],
         }, */
-        
+
         {
           type: "category",
           label: "API client reference",
-          items :[
+          items: [
             {
               type: "category",
               label: "File/Viewer",
@@ -273,7 +268,7 @@ const sidebars: SidebarsConfig = {
                     "introduction/document/methods/textSearch",
                     "introduction/document/methods/textSelect",
                     "introduction/document/methods/setSingleDocument",
-                    "introduction/document/methods/updateScaleList"
+                    "introduction/document/methods/updateScaleList",
                   ],
                 },
                 {
@@ -403,7 +398,7 @@ const sidebars: SidebarsConfig = {
                     "introduction/markup-annotations/methods/deletePoint",
                     "introduction/document/methods/findMarkUp",
                     "introduction/markup-annotations/methods/getAllSelectedMarkup",
-                    
+
                     "introduction/markup-annotations/methods/getCurrentColor",
                     "introduction/markup-annotations/methods/getDisplayName",
                     "introduction/markup-annotations/methods/getFillColor",
@@ -416,7 +411,7 @@ const sidebars: SidebarsConfig = {
                     "introduction/markup-annotations/methods/getMarkupProperties",
                     "introduction/markup-annotations/methods/getMarkupType",
                     "introduction/markup-annotations/methods/getMarkupTypes",
-                    
+
                     "introduction/document/methods/getMarkupSearchPadding",
                     "introduction/markup-annotations/methods/getMarkupXMLByGUID",
                     "introduction/markup-annotations/methods/getMarkupXMLData",
@@ -714,10 +709,10 @@ const sidebars: SidebarsConfig = {
                     "introduction/cad/methods/vectorBlocksAll",
                     "introduction/cad/methods/vectorLayersAll",
                     "introduction/cad/methods/viewMode",
-                    "introduction/cad/methods/zoomToBlock"
+                    "introduction/cad/methods/zoomToBlock",
                   ],
                 },
-    
+
                 {
                   type: "category",
                   label: "Callback Events",
@@ -789,7 +784,6 @@ const sidebars: SidebarsConfig = {
               type: "category",
               label: "Pro Version",
               items: [
-    
                 {
                   type: "category",
                   label: "File/Viewer",
@@ -864,12 +858,11 @@ const sidebars: SidebarsConfig = {
                         "introduction/pro-version/markup-annotations/methods/convertPDFAnnots",
                         "introduction/pro-version/markup-annotations/methods/markupButtonFromMatch",
                         "introduction/pro-version/markup-annotations/methods/usePDFAnnotProxy",
-
                       ],
                     },
                   ],
                 },
-    
+
                 {
                   type: "category",
                   label: "PDF",
@@ -906,8 +899,7 @@ const sidebars: SidebarsConfig = {
                         "introduction/pro-version/pdf/methods/setThumbnailFoxit",
                         "introduction/pro-version/pdf/methods/toggleShowHighlightMarkups",
                         "introduction/pro-version/pdf/methods/uploadPDFCustom",
-                        "introduction/pro-version/pdf/methods/usePDFAnnotProxy"
-                        
+                        "introduction/pro-version/pdf/methods/usePDFAnnotProxy",
                       ],
                     },
                     {
@@ -977,32 +969,47 @@ const sidebars: SidebarsConfig = {
                         "introduction/basic-version/callback/GUI_PDFPassWord",
                         "introduction/basic-version/callback/GUI_PDFRenderComplete",
                       ],
-                    },    
+                    },
                   ],
                 },
-    
               ],
             },
             "introduction/markup-methods/intro",
-
           ],
         },
-                
       ],
     },
     "server/server",
-  ],
-
-  rxSDKSidebar: [
     {
       type: "category",
       label: "RxSDK for Windows",
       items: [
         "RxSDK_for_Windows/RxSDK_for_Windows_release22",
+        {
+          type: "category",
+          label: "RxCore",
+          items: [
+            "RxSDK_for_Windows/RxCore/generalInformation",
+            "RxSDK_for_Windows/RxCore/theRxEngineObject",
+            "RxSDK_for_Windows/RxCore/theRxDocObject",
+            "RxSDK_for_Windows/RxCore/theRxConfigCOMObject",
+            "RxSDK_for_Windows/RxCore/theRxTextObject",
+            "RxSDK_for_Windows/RxCore/appendixes",
+          ],
+        },
+        {
+          type: "category",
+          label: "RxDisplay",
+          items: [
+            "RxSDK_for_Windows/RxDisplay/generalInformation",
+            "RxSDK_for_Windows/RxDisplay/theRxDisplayObject",
+            "RxSDK_for_Windows/RxDisplay/theRxDisplay3dObject",
+            "RxSDK_for_Windows/RxDisplay/appendixes",
+          ],
+        },
       ],
     },
   ],
-
 };
 
 export default sidebars;

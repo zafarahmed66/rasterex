@@ -19,7 +19,7 @@ const sidebars: SidebarsConfig = {
   /*tutorialSidebar_2: [
     {
     type: "category",
-    label: "RxSDK for Windows",
+    label: "Rasterex Server SDK",
     items: [
       "RxSDK_for_Windows\RxSDK_for_Windows_release22",
     ],
@@ -985,9 +985,9 @@ const sidebars: SidebarsConfig = {
   rxSDKSidebar: [
     {
       type: "category",
-      label: "RxSDK for Windows",
+      label: "Rasterex Server SDK",
       items: [
-        "RxSDK_for_Windows/RxSDK_for_Windows_release22",
+        // "RxSDK_for_Windows/RxSDK_for_Windows_release22",
         {
           type: "category",
           label: "RxCore",
@@ -1008,6 +1008,24 @@ const sidebars: SidebarsConfig = {
             "RxSDK_for_Windows/RxDisplay/theRxDisplayObject",
             "RxSDK_for_Windows/RxDisplay/theRxDisplay3dObject",
             "RxSDK_for_Windows/RxDisplay/appendixes",
+          ],
+        },
+        {
+          type: "category",
+          label: "RxMarkup",
+          items: [
+            "RxSDK_for_Windows/RxMarkup/generalInformation",
+            "RxSDK_for_Windows/RxMarkup/theRxRedlineObject",
+            "RxSDK_for_Windows/RxMarkup/appendixes",
+          ],
+        },
+        {
+          type: "category",
+          label: "RxPDF",
+          items: [
+            "RxSDK_for_Windows/RxPDF/generalInformation",
+            "RxSDK_for_Windows/RxPDF/theRxPDFObject",
+            "RxSDK_for_Windows/RxPDF/appendixes",
           ],
         },
       ],

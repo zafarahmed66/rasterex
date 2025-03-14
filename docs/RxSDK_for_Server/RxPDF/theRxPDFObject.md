@@ -31,9 +31,9 @@ CropPage(BSTR FileName, LONG Page, double xmin, double ymin, double xmax, double
 
 ### ExportPDFMarkupEx
 
-Applies Rasterex markup (redline) to a PDF as native PDF annotations. Since Rasterex markup elements have more options than PDF annotations, you may see visual differences when using this method. Please check [Appendix A](#appendix-a-return-values) for more information regarding visual appearances.
+Applies Rasterex markup (redline) to a PDF as native PDF annotations. Since Rasterex markup elements have more options than PDF annotations, you may see visual differences when using this method. Please check [Appendix A](/docs/RxSDK_for_Server/RxPDF/appendixes.md#appendix-a-visual-appearance-of-annotations) for more information regarding visual appearances.
 
-#### Syntax
+#### Synta
 
 ```cpp
 ExportPDFMarkupEx(BSTR OutputFileName, IDispatch* Document, IDispatch* Markup, double ConversionScale);

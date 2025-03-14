@@ -364,7 +364,7 @@ GetDimensionsEx(long Handle, double *Length, double *Area, double *Volume)
 
 ### GetElementInfo
 
-Returns information about a redline element. See [Element Types, Subtypes, and Alternatives](#element-types-sub-types-and-alternatives) for more details.
+Returns information about a redline element. See [Element Types, Subtypes, and Alternatives](#element-types-subtypes-and-alternatives) for more details.
 
 #### Syntax
 
@@ -390,7 +390,7 @@ GetElementInfo(long Handle, long *Type, long *Style, long *Alt, long *Marker, lo
 
 ### GetElementInfoEx
 
-Returns extended information about a redline element. See [Element Types, Subtypes, and Alternatives](#element-types-sub-types-and-alternatives) for more details.
+Returns extended information about a redline element. See [Element Types, Subtypes, and Alternatives](#element-types-subtypes-and-alternatives) for more details.
 
 #### Syntax
 
@@ -826,7 +826,7 @@ SetActiveDocument(LPDISPATCH Document)
 
 ### SetElementInfo
 
-Changes a redline element. See [Element Types, Subtypes, and Alternatives](#element-types-sub-types-and-alternatives) for more information.
+Changes a redline element. See [Element Types, Subtypes, and Alternatives](#element-types-subtypes-and-alternatives) for more information.
 
 #### Syntax
 
@@ -981,7 +981,7 @@ Undo()
 
 - **Type**: `long`
 - **Access**: Read and write
-- **Description**: Sets the current alternative type for the current element type. See [Element Types, Subtypes, and Alternatives](#element-types-sub-types-and-alternatives) for details.
+- **Description**: Sets the current alternative type for the current element type. See [Element Types, Subtypes, and Alternatives](#element-types-subtypes-and-alternatives) for details.
 
 ### Drawing
 
@@ -999,13 +999,13 @@ Undo()
 
 - **Type**: `long`
 - **Access**: Read and write
-- **Description**: Sets the current subtype for the current element type. See [Element Types, Subtypes, and Alternatives](#element-types-sub-types-and-alternatives) for details.
+- **Description**: Sets the current subtype for the current element type. See [Element Types, Subtypes, and Alternatives](#element-types-subtypes-and-alternatives) for details.
 
 ### DrawType
 
 - **Type**: `long`
 - **Access**: Read and write
-- **Description**: Sets or gets the current element type to use for drawing. See [Element Types, Subtypes, and Alternatives](#element-types-sub-types-and-alternatives) for details.
+- **Description**: Sets or gets the current element type to use for drawing. See [Element Types, Subtypes, and Alternatives](#element-types-subtypes-and-alternatives) for details.
 
 ### Engine
 

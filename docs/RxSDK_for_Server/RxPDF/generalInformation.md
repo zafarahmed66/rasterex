@@ -20,4 +20,4 @@ You will find a C# console sample that demonstrates how to convert any document 
 
 ### Additional Resources
 
-[Appendix B](#appendix-b) contains pseudo code to demonstrate how merging of multiple PDF files into a single multi-page PDF file can be done.
+[Appendix B](/docs/RxSDK_for_Server/RxPDF/appendixes.md#appendix-b-merging-pdf-files) contains pseudo code to demonstrate how merging of multiple PDF files into a single multi-page PDF file can be done.

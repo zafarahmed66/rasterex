@@ -71,7 +71,7 @@ GenerateQR(BSTR Text, int Size, int Margin, int Level, OLE_HANDLE *DIB)
 
 #### Notes
 
-- Check [Appendix A](#appendix-a-return-values) for more information about barcodes and examples of how they look.
+- Check [Appendix A](/docs/RxSDK_for_Server/RxSymbol/appendixes.mdx#appendix-a-barcode-appearances) for more information about barcodes and examples of how they look.
 - For more information about QR encoding, we recommend that you take a look at: [https://en.wikipedia.org/wiki/QR_code](https://en.wikipedia.org/wiki/QR_code).
 
 ### GenerateQRMeta
@@ -120,7 +120,7 @@ GetAztecBarcodeDIB(BSTR Text, LONG Size, LONG Type, LONG ErrorCorrection, OLE_HA
 
 #### Notes
 
-- Check [Appendix A](#appendix-a-return-values) for more information about barcodes and examples of how they look.
+- Check [Appendix A](/docs/RxSDK_for_Server/RxSymbol/appendixes.mdx#appendix-a-barcode-appearances) for more information about barcodes and examples of how they look.
 - For more information about Aztec encoding, we recommend that you take a look at: [https://en.wikipedia.org/wiki/Aztec_Code](https://en.wikipedia.org/wiki/Aztec_Code).
 
 ### GetCode128BarcodeDIB

@@ -35,7 +35,7 @@ HRESULT PrintClippedToDC(long DC, LPDISPATCH Doc, LPVARIANT Matrix, long DspL, l
 
 ### GetPlane
 
-Returns the definition for the specified clipping plane as given by its four coefficients. Six different planes are supported (index 0 to 5). See [Appendix D](#appendix-d) for more information about the four coefficients.
+Returns the definition for the specified clipping plane as given by its four coefficients. Six different planes are supported (index 0 to 5).
 
 #### Syntax
 
@@ -57,7 +57,7 @@ GetPlane(long lPlane, double *A, double *B, double *C, double *D)
 
 ### SetPlane
 
-Defines the specified clipping plane. The plane index must be an integer between 0 and 5. See [Appendix D](#appendix-d) for more information about the four coefficients.
+Defines the specified clipping plane. The plane index must be an integer between 0 and 5.
 
 #### Syntax
 

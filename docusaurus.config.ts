@@ -87,6 +87,10 @@ const config: Config = {
           position: "left",
           label: "Rasterex Server SDK",
         },
+        {
+          label: "Rasterex REST API",
+          href: "#",
+        },
       ],
     },
     footer: {

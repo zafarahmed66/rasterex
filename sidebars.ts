@@ -1060,6 +1060,8 @@ const sidebars: SidebarsConfig = {
       ],
     },
   ],
+
+  rxRESTAPI: ["RxREST_API/introduction"],
 };
 
 export default sidebars;

@@ -88,8 +88,10 @@ const config: Config = {
           label: "Rasterex Server SDK",
         },
         {
+          type: "docSidebar",
           label: "Rasterex REST API",
-          href: "#",
+          position: "left",
+          sidebarId: "rxRESTAPI",
         },
       ],
     },
